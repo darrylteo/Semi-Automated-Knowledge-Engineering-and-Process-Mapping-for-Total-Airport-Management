@@ -6,7 +6,7 @@ The project focuses on extracting structured knowledge from the **Eurocontrol A-
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ### `./data/`
 Contains the source documentation and text conversions used for extraction.
@@ -20,12 +20,12 @@ Contains the output of the extraction process.
 * `extraction_results.csv`: The raw triples/data extracted via **LangExtract**.
 * **Manual Annotation**: The column labeled `Good` in the CSV was manually annotated to validate the accuracy and relevance of the extracted knowledge.
 
-### 📝 Source Code
+### Source Code
 * `getTriplesLang.ipynb`: The primary Jupyter Notebook containing the logic to process the text, perform triple extraction, and construct the Knowledge Graph.
 
 ---
 
-## 📖 Citation
+## Citation
 
 If you use this code or data in your research, please cite:
 
