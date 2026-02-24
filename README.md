@@ -4,7 +4,7 @@ This repository contains the code and datasets for the paper: **"Semi-Automated 
 
 The project focuses on extracting structured knowledge from the **Eurocontrol A-CDM** implementation manual to build a representative Knowledge Graph for airport operations, and evaluating the results for short-context and long-context information retrieval.
 
-[FULL CODE WILL BE MADE AVAILABLE UPON PAPER ACCEPTANCE]
+[Full code will be made available upon paper submission acknowledgement]
 
 ---
 
