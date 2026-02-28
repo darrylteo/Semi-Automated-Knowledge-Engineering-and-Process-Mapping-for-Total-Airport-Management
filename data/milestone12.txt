@@ -1,0 +1,32 @@
+MILESTONE 12 Aircraft Ready
+
+Definition The time when all doors are closed, boarding bridge removed, push back vehicle con-
+nected, ready to taxi immediately upon reception of TWR instructions (ARDT). 
+
+Origin and priority Provided by the Aircraft Operator/ Ground Handler.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is directly available with an accuracy of +/- 1 minute.
+
+Effect ATC refines the pre-departure sequence. The pilot requests start up just before TSAT, 
+following coordination with the Ground Handler. (Dispatcher / Supervisor / Redcap).
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Ready Time (ARDT) in 
+the Airport CDM Platform and that the aircraft is ready for start up / push-back.
+
+Second step: To inform the AO/GH that TOBT has passed and the Airport CDM Platform 
+has not yet received ARDT or Ready Status (RDY).
+
+Inform of ARDT or RDY confirming that the flight follows the indicated TOBT. At TOBT 
++ tolerance the AO/GH are informed that TOBT has passed and there has not been a
+ready status message yet.
+
+This procedure is triggered by
+n  an input to the Airport CDM Platform.
+
+Operational Status 
+(changes to) READY
+
+Action on CDM N.A
+Operation (ACISP)

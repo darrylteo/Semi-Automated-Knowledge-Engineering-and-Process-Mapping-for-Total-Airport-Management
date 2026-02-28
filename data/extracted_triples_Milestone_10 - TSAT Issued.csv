@@ -1,0 +1,20 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+ATC issues TSAT,hasStakeholder,ATC,1,Definition The time ATC issues the Target Start Up Approval Time,AlignmentStatus.MATCH_EXACT
+Inform partners of TSAT,hasStakeholder,ACISP,1,Procedures First step: To inform all relevant partners of the TSAT that has been allocated to the flight.,AlignmentStatus.MATCH_FUZZY
+Network Operations receives TSAT info,hasStakeholder,Network_Operations,1,The Network Operations is informed by a T-DPI-s for non regulated flights.,AlignmentStatus.MATCH_FUZZY
+AO/GH manages turn-round based on TSAT,hasStakeholder,AO/GH,1,"Effect The flight is stabilised into the pre-departure sequence. The Aircraft Operator/ Ground Handler, in coordination with the aircrew, can manage the turn-round process accordingly.",AlignmentStatus.MATCH_EXACT
+Check TOBT update tolerance after TSAT,hasStakeholder,ACISP,1,"Procedures Second step: To check whether the number of TOBT updates exceeds a tolerance defined locally, after TSAT has been issued.",AlignmentStatus.MATCH_LESSER
+ATC issues TSAT,hasNext,Inform partners of TSAT,1,Definition The time ATC issues the Target Start Up Approval Time,AlignmentStatus.MATCH_FUZZY
+Inform partners of TSAT,hasNext,Network Operations receives TSAT info,1,Procedures First step: To inform all relevant partners of the TSAT that has been allocated to the flight.,AlignmentStatus.MATCH_FUZZY
+Inform partners of TSAT,hasNext,AO/GH manages turn-round based on TSAT,1,Procedures First step: To inform all relevant partners of the TSAT that has been allocated to the flight.,AlignmentStatus.MATCH_FUZZY
+ATC issues TSAT,hasNext,Check TOBT update tolerance after TSAT,1,Definition The time ATC issues the Target Start Up Approval Time,AlignmentStatus.MATCH_FUZZY
+TOBT update after TSAT issue,hasStakeholder,AO/GH,1,TOBT update after TSAT issue,AlignmentStatus.MATCH_FUZZY
+Check TOBT updates after TSAT issued,hasStakeholder,ACISP,1,A check shall be performed to see the number of TOBT updates after TSAT has been issued.,AlignmentStatus.MATCH_EXACT
+Process TOBT input according to local procedure,hasStakeholder,AO/GH,1,"In case the number of TOBT updates exceeds a threshold, then the TOBT input should be processed according to local procedure.",AlignmentStatus.MATCH_EXACT
+Operational status changes to SEQUENCED,hasStakeholder,ACISP,1,Operational Status (changes to) SEQUENCED,AlignmentStatus.MATCH_EXACT
+TTOT updated in ACISP,hasStakeholder,ACISP,1,Action on CDM Operation (ACISP) TTOT updated,AlignmentStatus.MATCH_EXACT
+TOBT update after TSAT issue,hasNext,Check TOBT updates after TSAT issued,1,This process is triggered by n TOBT update after TSAT issue,AlignmentStatus.MATCH_FUZZY
+Check TOBT updates after TSAT issued,hasNext,Process TOBT input according to local procedure,1,Second: A check shall be performed to see the number of TOBT updates after TSAT has been issued.,AlignmentStatus.MATCH_FUZZY
+Process TOBT input according to local procedure,hasNext,TTOT updated in ACISP,1,"In case the number of TOBT updates exceeds a threshold, then the TOBT input should be processed according to local procedure.",AlignmentStatus.MATCH_FUZZY
+TTOT updated in ACISP,hasNext,Operational status changes to SEQUENCED,1,Action on CDM Operation (ACISP) TTOT updated,AlignmentStatus.MATCH_FUZZY
+MISSING: stabalized into pre-departure sequence,,,-1,,

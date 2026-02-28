@@ -1,0 +1,38 @@
+MILESTONE 3 Take Off from Outstation
+
+Definition The ATOT from the outstation (ADEP)
+
+Origin and priority The outstation provides ATOT to the Network Operations and Aircraft Operator.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality The accuracy of ATOT is +/- 1 minute.
+
+Effect If the departure airport is more than 3hrs flying time from the destination airport the ATOT 
+is received from either the Network Operations FUM or via the Aircraft Operator / Ground 
+Handler. Using the ATOT an ELDT can be calculated by using the Estimated Elapsed Time 
+on the FPL. 
+
+If the flight is within 3hrs flying time of the destination airport the Network Operations moni-
+tors progress of the flight using the ETFMS and send a Flight Update Message (FUM) that 
+provides updates of the flight’s progress. 
+
+Procedures To check whether the AO/GH estimated landing time after take off from outstation are con-
+sistent with the outbound ATC Flight Plan, and when needed inform the Network Operations 
+about the updated take off time estimates using a T-DPI-t Message. 
+
+This check shall be performed to verify feasibility of the ATC Flight Plan at take off from outsta-
+tion. A TTOT tolerance of 5 minutes is respected before Network Operations is informed of 
+the updated TTOT. Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT. 
+In case EOBT is later than EIBT+MTTT, TTOT equals EOBT+EXOT. In the case where 
+TOBT is available this prediction will overrule the EIBT+MTTT estimate, hence TTOT equals 
+TOBT+EXOT.
+
+This process is triggered by
+n    the take off from outstation.
+
+Operational Status AIRBORNE
+(changes to)
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated

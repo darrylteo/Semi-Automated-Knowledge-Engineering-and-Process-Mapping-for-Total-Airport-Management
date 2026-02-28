@@ -1,0 +1,23 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Ground Handling Operations commence,hasStakeholder,AO/GH,1,Definition Commence of Ground Handling Operations (ACGT).,AlignmentStatus.MATCH_EXACT
+AO/GH provides Ground Handling Started information,hasStakeholder,AO/GH,1,Origin and priority Aircraft Operator / Ground Handler will provide the information.,AlignmentStatus.MATCH_EXACT
+ACGT occurrence triggers updates,hasStakeholder,ACISP,1,Effect The occurrence of ACGT triggers an update of downstream estimates,AlignmentStatus.MATCH_EXACT
+TOBT updated by AO/GH,hasStakeholder,AO/GH,1,"TOBT is updated automatically or inserted manually by the Aircraft Operator / Ground Handler, calculated on the basis of the estimated turn-round period for the departing flight.",AlignmentStatus.MATCH_EXACT
+Check AO/GH TOBT consistency with ATC Flight Plan,hasStakeholder,AO/GH,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_EXACT
+Network Operations informed of TTOT changes,hasStakeholder,Network_Operations,1,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_LESSER
+Ground Handling Operations commence,hasNext,AO/GH provides Ground Handling Started information,1,Definition Commence of Ground Handling Operations (ACGT).,AlignmentStatus.MATCH_FUZZY
+AO/GH provides Ground Handling Started information,hasNext,ACGT occurrence triggers updates,1,Origin and priority Aircraft Operator / Ground Handler will provide the information.,AlignmentStatus.MATCH_FUZZY
+ACGT occurrence triggers updates,hasNext,TOBT updated by AO/GH,1,Effect The occurrence of ACGT triggers an update of downstream estimates,AlignmentStatus.MATCH_FUZZY
+TOBT updated by AO/GH,hasNext,Check AO/GH TOBT consistency with ATC Flight Plan,1,"TOBT is updated automatically or inserted manually by the Aircraft Operator / Ground Handler, calculated on the basis of the estimated turn-round period for the departing flight.",AlignmentStatus.MATCH_FUZZY
+Check AO/GH TOBT consistency with ATC Flight Plan,hasNext,Network Operations informed of TTOT changes,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+ACGT occurs,hasStakeholder,ACISP,1,This process is triggered by Actual Commence of Ground Handling: ACGT,AlignmentStatus.MATCH_FUZZY
+"ETTT/TOBT, TTOT updated in ACISP",hasStakeholder,ACISP,1,"Operation (ACISP) ETTT/TOBT, TTOT updated",AlignmentStatus.MATCH_FUZZY
+Verify feasibility of ATC Flight Plan,hasStakeholder,ACISP,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_LESSER
+Respect TTOT tolerance,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_EXACT
+Inform Network Operations on updated TTOT,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Network Operations receives updated TTOT,hasStakeholder,Network_Operations,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+ACGT occurs,hasNext,"ETTT/TOBT, TTOT updated in ACISP",1,This process is triggered by Actual Commence of Ground Handling: ACGT,AlignmentStatus.MATCH_LESSER
+"ETTT/TOBT, TTOT updated in ACISP",hasNext,Verify feasibility of ATC Flight Plan,1,"Operation (ACISP) ETTT/TOBT, TTOT updated",AlignmentStatus.MATCH_EXACT
+Verify feasibility of ATC Flight Plan,hasNext,Respect TTOT tolerance,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Respect TTOT tolerance,hasNext,Inform Network Operations on updated TTOT,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Inform Network Operations on updated TTOT,hasNext,Network Operations receives updated TTOT,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY

@@ -1,0 +1,15 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Start up requested (ASRT),hasStakeholder,ATC,1,The time that start up is requested (ASRT).,AlignmentStatus.MATCH_EXACT
+ATC confirms TSAT to pilot,hasStakeholder,ATC,1,ATC confirms TSAT to the pilot in order to maintain the aircraft in the pre-departure sequence.,AlignmentStatus.MATCH_LESSER
+ATC assures regulated flight respects CTOT,hasStakeholder,ATC,1,"Provided the aircraft was ready on time (ARDT), it is now up to ATC to assure that a regulated flight can respect its CTOT.",AlignmentStatus.MATCH_EXACT
+Inform CDM Partners of ASRT in ACISP,hasStakeholder,ACISP,1,First step: To inform all relevant Airport CDM Partners of Actual Start up Request Time (ASRT) in the Airport CDM Platform.,AlignmentStatus.MATCH_EXACT
+Alert CDM Partners if no start up requested within TSAT tolerance,hasStakeholder,ACISP,1,Second step: to alert all relevant Airport CDM Partners when no start up has been requested inside the locally agreed TSAT tolerance window.,AlignmentStatus.MATCH_LESSER
+AO/GH informed of no start up request,hasStakeholder,AO/GH,1,"If the start up request is not made by TSAT + tolerance, the AO/GH is informed that no start up has been requested",AlignmentStatus.MATCH_EXACT
+AO/GH updates TOBT,hasStakeholder,AO/GH,1,and should update TOBT.,AlignmentStatus.MATCH_EXACT
+Start up requested (ASRT),hasNext,ATC confirms TSAT to pilot,1,The time that start up is requested (ASRT).,AlignmentStatus.MATCH_FUZZY
+Start up requested (ASRT),hasNext,Inform CDM Partners of ASRT in ACISP,1,The time that start up is requested (ASRT).,AlignmentStatus.MATCH_FUZZY
+ATC confirms TSAT to pilot,hasNext,ATC assures regulated flight respects CTOT,1,ATC confirms TSAT to the pilot in order to maintain the aircraft in the pre-departure sequence.,AlignmentStatus.MATCH_FUZZY
+Inform CDM Partners of ASRT in ACISP,hasNext,Alert CDM Partners if no start up requested within TSAT tolerance,1,First step: To inform all relevant Airport CDM Partners of Actual Start up Request Time (ASRT) in the Airport CDM Platform.,AlignmentStatus.MATCH_FUZZY
+Alert CDM Partners if no start up requested within TSAT tolerance,hasNext,AO/GH informed of no start up request,1,Second step: to alert all relevant Airport CDM Partners when no start up has been requested inside the locally agreed TSAT tolerance window.,AlignmentStatus.MATCH_FUZZY
+AO/GH informed of no start up request,hasNext,AO/GH updates TOBT,1,"If the start up request is not made by TSAT + tolerance, the AO/GH is informed that no start up has been requested",AlignmentStatus.MATCH_FUZZY
+Tolerance window passed at TSAT,hasStakeholder,ACISP,1,Timestamp when the tolerance window has passed at TSAT.,AlignmentStatus.MATCH_EXACT

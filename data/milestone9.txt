@@ -1,0 +1,44 @@
+MILESTONE 9 Final Confirmation of the TOBT
+
+Definition The time at which the Aircraft Operator or Ground Handler provide their most accurate 
+TOBT taking into account the operational situation.
+
+Origin and priority The Aircraft Operator / Ground Handler provides the information.
+
+Timing The information is provided t minutes before EOBT
+(t is a parameter time agreed locally).
+
+Data Quality Accuracy is agreed locally.
+
+Effect The aim of the final TOBT is to give a timely, accurate and reliable assessment of the off-
+block time. It is recognised that main benefits of sharing the TOBT are expected in case of 
+disruptions (internal or external). In such cases, the difference between EOBT (shared by 
+ATC, Network Operations and Stand / Gate Management) and TOBT may be important.
+
+An accurate TOBT at [EOBT-t minutes] is a pre-requisite for ATC to establish a push back / 
+pre-departure sequence. Emphasis is put on the need for the Aircraft Operator to integrate 
+his own strategy to compute a TOBT related to the flight. Following the receipt of the TOBT, 
+the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT) based on 
+the predicted traffic load, gate / stand location, runway in use, and waiting period at the 
+Holding Position, etc. 
+
+The flight is introduced into the pre-departure sequence. The Aircraft Operator / Ground 
+Handler, in coordination with the aircrew, can manage the turn-round process accordingly.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Opera-
+tions is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check should be performed at a predefined time (local parameter) to confirm TOBT 
+prior to TSAT issue and verify feasibility of the ATC Flight Plan estimates given the updated 
+TOBT. A TTOT tolerance is respected before Network Operations is informed on updated 
+TTOT. 
+
+This Milestone Process is actually constantly applicable in the CDM Platform, as soon as 
+a TOBT is available. However the confirmed TOBT prior to TSAT has special status, where 
+AO/GH check the quality of TOBT before TSAT issue. 
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM This process is triggered by   	n  a new TOBT or TTOT update. No need to confirm an 
+Operation (ACISP)      existing TOBT if it has been manually modified before.

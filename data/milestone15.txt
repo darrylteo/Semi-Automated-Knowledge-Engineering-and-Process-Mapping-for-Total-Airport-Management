@@ -1,0 +1,34 @@
+MILESTONE 15 Off-Block
+
+Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking 
+position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).
+
+Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems 
+(e.g. A-SMGCS) or by manual input.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect TTOT updated considering the EXOT.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Off-Block Time (AOBT) 
+in the Airport CDM Platform and that the aircraft has commenced push-back / taxi from 
+parking position. 
+
+Second step: To check if TTOT changes by more than the agreed tolerance and inform 
+Network Operations.
+
+Inform of AOBT when it occurs. AOBT always triggers an A-DPI message to Network 
+Operations or in the case of remote holding at a defined time prior to TTOT. After a first 
+A-DPI is sent this check shall be performed to check TTOT updates against the TTOT
+tolerance before Network Operations is informed, with a new A-DPI, of the updated
+TTOT.
+
+This process is triggered by AOBT detection.
+
+Operational Status 
+(changes to) OFF-BLOCK
+
+Action on CDM 
+Operation (ACISP) AOBT recorded

@@ -1,0 +1,20 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Gate opens for passenger boarding,hasStakeholder,Airport,0,The gate is open for passengers to physically start boarding,AlignmentStatus.MATCH_EXACT
+Boarding start automatically recorded,hasStakeholder,Airport,1,Automatic from airport system,AlignmentStatus.MATCH_FUZZY
+Boarding start manually input,hasStakeholder,AO/GH,1,manual input by Aircraft Operator/ Ground Handler,AlignmentStatus.MATCH_FUZZY
+Inform Airport CDM Partners of ASBT,hasStakeholder,ACISP,1,First step: To inform all relevant Airport CDM Partners of Actual Start Boarding Time (ASBT).,AlignmentStatus.MATCH_FUZZY
+Check boarding start time against TOBT,hasStakeholder,ACISP,1,Second step: To check whether boarding starts in time to respect TOBT,AlignmentStatus.MATCH_FUZZY
+Inform AO/GH for TOBT update,hasStakeholder,ACISP,1,inform the AO/GH in case TOBT needs to be updated.,AlignmentStatus.MATCH_FUZZY
+Gate opens for passenger boarding,hasNext,Boarding start automatically recorded,1,Origin and priority Automatic from airport system or manual input by Aircraft Operator/ Ground Handler.,AlignmentStatus.MATCH_EXACT
+Gate opens for passenger boarding,hasNext,Boarding start manually input,1,Origin and priority Automatic from airport system or manual input by Aircraft Operator/ Ground Handler.,AlignmentStatus.MATCH_FUZZY
+Boarding start automatically recorded,hasNext,Inform Airport CDM Partners of ASBT,1,Procedures First step: To inform all relevant Airport CDM Partners of Actual Start Boarding Time (ASBT).,AlignmentStatus.MATCH_EXACT
+Boarding start manually input,hasNext,Inform Airport CDM Partners of ASBT,1,Procedures First step: To inform all relevant Airport CDM Partners of Actual Start Boarding Time (ASBT).,AlignmentStatus.MATCH_FUZZY
+Inform Airport CDM Partners of ASBT,hasNext,Check boarding start time against TOBT,1,Second step: To check whether boarding starts in time to respect TOBT and inform the AO/GH in case TOBT needs to be updated.,AlignmentStatus.MATCH_EXACT
+Check boarding start time against TOBT,hasNext,Inform AO/GH for TOBT update,1,Second step: To check whether boarding starts in time to respect TOBT and inform the AO/GH in case TOBT needs to be updated.,AlignmentStatus.MATCH_FUZZY
+Process triggered by time variable before TOBT,hasStakeholder,ACISP,1,This process is triggered by n a time variable <value> minutes before TOBT.,AlignmentStatus.MATCH_FUZZY
+Check boarding status,hasStakeholder,AO/GH,1,At a certain time before TOBT (local variable e.g. corresponding to aircraft type) a check shall be performed to check the boarding status.,AlignmentStatus.MATCH_EXACT
+Inform of ASBT,hasStakeholder,AO/GH,1,Inform of Actual Start Boarding Time (ASBT) when it occurs.,AlignmentStatus.MATCH_FUZZY
+Operational status changes to BOARDING,hasStakeholder,ACISP,1,Operational Status (changes to) BOARDING,AlignmentStatus.MATCH_FUZZY
+Process triggered by time variable before TOBT,hasNext,Check boarding status,1,This process is triggered by n a time variable <value> minutes before TOBT.,AlignmentStatus.MATCH_EXACT
+Check boarding status,hasNext,Inform of ASBT,1,At a certain time before TOBT (local variable e.g. corresponding to aircraft type) a check shall be performed to check the boarding status.,AlignmentStatus.MATCH_FUZZY
+Inform of ASBT,hasNext,Operational status changes to BOARDING,1,Inform of Actual Start Boarding Time (ASBT) when it occurs.,AlignmentStatus.MATCH_FUZZY

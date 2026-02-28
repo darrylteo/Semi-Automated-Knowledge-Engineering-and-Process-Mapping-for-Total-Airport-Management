@@ -1,0 +1,33 @@
+MILESTONE 5 Final Approach	
+
+Definition The flight enters the Final Approach phase at the destination airport.
+
+Origin and priority This information is normally available from ATC. The radar system detects a flight based 
+upon the assigned SSR code and identifies when the flight crosses either a defined 
+range / position or passes/leaves a predetermined level.
+
+Timing Dependent upon local parameters that are defined by ATC.
+
+Data Quality Must be equal to the accuracy of the ATC system.
+
+Effect Update of the ELDT to determine a new TOBT. When a flight reaches this stage it is usu-
+ally between 2 and 5 minutes from landing (depending on the parameter set by ATC). 
+This is often the prompt for many partners to start moving resources connected with the 
+flight, such as positioning a parking marshal and ground handling services.
+
+Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent 
+with the ATC Flight Plan. Network Operations is informed when the TTOT changes by 
+more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the up-
+dated TOBT. The TTOT tolerance is respected before Network Operations is informed 
+of updated TTOT.
+
+This process is triggered by
+n    the detection of the flight by radar in either FIR, TMA, or on Final Approach.
+
+Operational Status 
+(changes to) FINAL
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated

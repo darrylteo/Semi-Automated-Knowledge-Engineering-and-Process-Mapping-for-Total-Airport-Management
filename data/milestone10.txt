@@ -1,0 +1,37 @@
+MILESTONE 10 TSAT Issued	
+
+Definition The time ATC issues the Target Start Up Approval Time
+
+Origin and priority ATC
+
+Timing The information is provided t-minutes before EOBT, where t is a parameter agreed locally
+
+Data Quality Accuracy is agreed locally.
+
+Effect The flight is stabilised into the pre-departure sequence. The Aircraft Operator/ 
+Ground Handler, in coordination with the aircrew, can manage the turn-round process 
+accordingly.
+
+Procedures First step: To inform all relevant partners of the TSAT that has been allocated to the flight. 
+The Network Operations is informed by a T-DPI-s for non regulated flights.
+
+Second step: To check whether the number of TOBT updates exceeds a tolerance defined 
+locally, after TSAT has been issued.
+
+First: The TSAT will indicate to the partners the time when the start up approval can be 
+expected. Network Operations will be informed with a T-DPI-s for non regulated flights. No 
+check is performed.
+
+Second: A check shall be performed to see the number of TOBT updates after TSAT has 
+been issued. In case the number of TOBT updates exceeds a threshold, then the TOBT 
+input should be processed according to local procedure. 
+
+This process is triggered by 
+n	 A defined time (local parameter) before TOBT
+n	 TOBT update after TSAT issue
+
+Operational Status 
+(changes to) SEQUENCED
+
+Action on CDM 
+Operation (ACISP) TTOT updated

@@ -1,0 +1,604 @@
+MILESTONE 1 ATC Flight Plan Activated	
+
+Definition The ICAO flight plan is submitted to ATC. The Airport CDM Platform is initiated for this flight, 
+and all available information is processed.
+
+Origin and priority The ATC Flight Plan is submitted by the Aircraft Operator and distributed by the IFPS. All 
+involved ATC units receive the flight plan, including departure and destination aerodromes.
+
+Timing Normally this takes place 3 hours before EOBT, however it may be later. In some cases a 
+repetitive flight plan (RFPL) has been submitted, covering daily or weekly flights.
+
+Data Quality The ATC Flight Plan corresponds to the airport slot programme.
+
+Effect One aircraft turn-round normally includes an arriving and a departing flight, meaning that 
+it will have two related flight plans. For coordinated airports, the outbound flight is already 
+known. The flight plan may be used to update certain information such as type of aircraft. 
+For long distance flights, the ELDT may differ from the airport slot. For non coordinated 
+airports, the flight plan is used to initiate the outbound flight. The flight is ready not later than 
+15 minutes after the planned EOBT. The DPI process commences the correct messaging 
+with Network Operations (if implemented – see attachment 2 for details).
+
+Procedures To check consistency between ATC Flight Plan, Airport Slot and Airport flight data and 
+then confirm the flight to the Network Operations and allow further local processing of 
+the flight.
+
+This check shall be performed to verify the consistency between the ATC Flight Plan, Airport 
+Slot and Airport flight data before the first E-DPI is sent. The AO must provide correct infor-
+mation before this first E-DPI message, in order to feed Network Operations with consistent 
+SOBT, aircraft registration, and first destination data, as early in time as possible. The E-DPI 
+message should not be sent if no or inconsistent information is provided.
+
+This process is triggered by:
+n	 The first activation of the ATC Flight Plan (earliest EOBT-3 hr), or
+n	 New or late submissions of the ATC Flight Plan, after cancellation or revised EOBT
+
+Operational Status INITIATED
+(changes to)
+
+Action on CDM ELDT and EIBT updated for an arrival	
+Operation (ACISP) EOBT and ETOT updated for a departure	
+
+The DPI process commences (if implemented – see section 3.7.3 for details).
+
+
+
+MILESTONE 2 EOBT - 2 hr
+
+Definition At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regu-
+lated or not. All regulated flights receive a CTOT from Network Operations.
+
+Origin and priority The CTOT is issued by the Network Operations and is sent to relevant ATS units as well as the 
+departure aerodrome. CTOT flights usually have a priority over unregulated flights.
+
+Timing If the flight is regulated, a CTOT is issued at EOBT–2h.	
+
+Data Quality Not applicable.
+
+Effect For inbound flights, ELDT is updated based on information provided by the FUM messages, 
+taking into account the actual progress of the flight. 					
+
+Procedures To check (before or after take off from outstation) whether AO/GH flight estimates are consist-
+ent with the ATC Flight Plan and to inform Network Operations about the updated take off 
+time estimate, using a T-DPI Message.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan estimated off block 
+time at EOBT-2 hrs. At EOBT-2 hrs Network Operations is informed through the first T-DPI 
+message. Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT, if lat-
+er than EOBT+EXOT. In the case of manual input of TOBT, this estimate will override the 
+EIBT+MTTT estimate, hence TTOT equals TOBT+EXOT.
+
+This procedure is triggered by 
+n     a time stamp, at EOBT – 2h.	
+
+Operational Status N. A.	
+(changes to)
+
+Action on CDM ETOT/TTOT/CTOT	  
+Operation (ACISP) Mark appropriate fields as REGULATED
+
+
+
+MILESTONE 3 Take Off from Outstation
+
+Definition The ATOT from the outstation (ADEP)
+
+Origin and priority The outstation provides ATOT to the Network Operations and Aircraft Operator.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality The accuracy of ATOT is +/- 1 minute.
+
+Effect If the departure airport is more than 3hrs flying time from the destination airport the ATOT 
+is received from either the Network Operations FUM or via the Aircraft Operator / Ground 
+Handler. Using the ATOT an ELDT can be calculated by using the Estimated Elapsed Time 
+on the FPL. 
+
+If the flight is within 3hrs flying time of the destination airport the Network Operations moni-
+tors progress of the flight using the ETFMS and send a Flight Update Message (FUM) that 
+provides updates of the flight’s progress. 
+
+Procedures To check whether the AO/GH estimated landing time after take off from outstation are con-
+sistent with the outbound ATC Flight Plan, and when needed inform the Network Operations 
+about the updated take off time estimates using a T-DPI-t Message. 
+
+This check shall be performed to verify feasibility of the ATC Flight Plan at take off from outsta-
+tion. A TTOT tolerance of 5 minutes is respected before Network Operations is informed of 
+the updated TTOT. Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT. 
+In case EOBT is later than EIBT+MTTT, TTOT equals EOBT+EXOT. In the case where 
+TOBT is available this prediction will overrule the EIBT+MTTT estimate, hence TTOT equals 
+TOBT+EXOT.
+
+This process is triggered by
+n    the take off from outstation.
+
+Operational Status AIRBORNE
+(changes to)
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated
+
+
+
+MILESTONE 4 Local Radar Update
+
+Definition The flight enters the FIR (Flight Information Region) or the local airspace of the destina-
+tion airport.
+
+Origin and priority This information is normally available from the Area Control Centre (ACC) or Approach Con-
+trol Unit that is associated with an airport. The radar system is able to detect a flight based 
+upon the assigned SSR code when the flight crosses a defined FIR/ATC boundary.
+
+Timing Dependent upon the position of the airport in relation to the FIR boundary.
+
+Data Quality Must be equal to the accuracy of the ATC system.
+
+Effect Update of the ELDT can trigger a new TOBT to be entered by the AO/GH, or calculated 
+automatically by the Airport CDM Platform. The accuracy of ELDT is particularly impor-
+tant at this stage since downstream decisions are taken, such as stand /gate / aircraft 
+changes, preparation of arrival sequence, preparation of ground handling operations, 
+decisions for connecting passengers.
+
+Uncertainty and ELDT non-accuracy at this stage significantly increase risks for bad and 
+last minute decisions and internal disruptions. The objective to decrease the number of 
+stand and gate changes in the last 30 minutes requires high accuracy regarding depar-
+ture and arrival times. Therefore, taking into account the taxi-in time (EXIT), any change 
+to a stand or gate is not preferred after ELDT-30’.
+
+The update of TOBT for the related departing flight takes place following this milestone. 
+Decisions such as the turn-round period, connecting passengers etc are taken and 
+need to be stable at this event. An estimated in-block time (EIBT) is computed using the 
+ELDT and the estimated taxi-in time.
+
+Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent 
+with the ATC Flight Plan. Network Operations is informed when the TTOT changes by 
+more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the up-
+dated TOBT. The TTOT tolerance is respected before Network Operations is informed 
+of updated TTOT.
+
+This process is triggered by
+n   the detection of the flight by radar in either FIR, TMA, or on Final Approach.
+
+Operational Status 
+(changes to) FIR
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated
+
+
+
+MILESTONE 5 Final Approach	
+
+Definition The flight enters the Final Approach phase at the destination airport.
+
+Origin and priority This information is normally available from ATC. The radar system detects a flight based 
+upon the assigned SSR code and identifies when the flight crosses either a defined 
+range / position or passes/leaves a predetermined level.
+
+Timing Dependent upon local parameters that are defined by ATC.
+
+Data Quality Must be equal to the accuracy of the ATC system.
+
+Effect Update of the ELDT to determine a new TOBT. When a flight reaches this stage it is usu-
+ally between 2 and 5 minutes from landing (depending on the parameter set by ATC). 
+This is often the prompt for many partners to start moving resources connected with the 
+flight, such as positioning a parking marshal and ground handling services.
+
+Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent 
+with the ATC Flight Plan. Network Operations is informed when the TTOT changes by 
+more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the up-
+dated TOBT. The TTOT tolerance is respected before Network Operations is informed 
+of updated TTOT.
+
+This process is triggered by
+n    the detection of the flight by radar in either FIR, TMA, or on Final Approach.
+
+Operational Status 
+(changes to) FINAL
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated
+
+
+
+MILESTONE 6 Landed
+
+Definition ALDT – Actual Landing Time. This is the time that an aircraft touches down on a runway. 
+(Equivalent to ATC ATA – Actual Time of Arrival landing, ACARS=ON).
+
+Origin and priority Provided by ATC system or by ACARS from equipped aircraft.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of ALDT triggers an update of downstream estimates: TOBT and TTOT 
+are updated automatically or inserted manually by the Aircraft Operator / Ground Han-
+dler, calculated on the basis of the defined turn-round period for the departing flight.
+
+The EIBT can be updated according to the ALDT +EXIT.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual Landing Time: ALDT
+
+Operational Status 
+(changes to) LANDED
+
+Action on CDM ELDT changes to ALDT,
+Operation (ACISP) EIBT, TOBT and TTOT updated
+
+
+
+MILESTONE 7 In-Block	
+
+Definition AIBT - Actual In-Block Time. This is the time that an aircraft arrives in-blocks.
+(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)
+
+Note: ACGT is considered to commence at AIBT
+
+Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems 
+(e.g. A-SMGCS) or by manual input.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and 
+TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground 
+Handler, calculated on the basis of the estimated turn-round period for the departing 
+flight.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual In Blocks Time: AIBT
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM EIBT changes to AIBT
+Operation (ACISP) TOBT and TTOT updated
+
+
+
+MILESTONE 8 Ground Handling Started	
+
+Definition Commence of Ground Handling Operations (ACGT).
+
+Note: this milestone is specific to flights that are the first operation of the day or that have 
+been long term parked. For flights that are on a normal turn-round ACGT is considered 
+to commence at AIBT.
+
+Origin and priority Aircraft Operator / Ground Handler will provide the information.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of ACGT triggers an update of downstream estimates:
+TOBT is updated automatically or inserted manually by the Aircraft Operator / Ground 
+Handler, calculated on the basis of the estimated turn-round period for the departing 
+flight.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual Commence of Ground Handling: ACGT 
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM 
+Operation (ACISP) ETTT/TOBT, TTOT updated
+
+
+
+MILESTONE 9 Final Confirmation of the TOBT
+
+Definition The time at which the Aircraft Operator or Ground Handler provide their most accurate 
+TOBT taking into account the operational situation.
+
+Origin and priority The Aircraft Operator / Ground Handler provides the information.
+
+Timing The information is provided t minutes before EOBT
+(t is a parameter time agreed locally).
+
+Data Quality Accuracy is agreed locally.
+
+Effect The aim of the final TOBT is to give a timely, accurate and reliable assessment of the off-
+block time. It is recognised that main benefits of sharing the TOBT are expected in case of 
+disruptions (internal or external). In such cases, the difference between EOBT (shared by 
+ATC, Network Operations and Stand / Gate Management) and TOBT may be important.
+
+An accurate TOBT at [EOBT-t minutes] is a pre-requisite for ATC to establish a push back / 
+pre-departure sequence. Emphasis is put on the need for the Aircraft Operator to integrate 
+his own strategy to compute a TOBT related to the flight. Following the receipt of the TOBT, 
+the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT) based on 
+the predicted traffic load, gate / stand location, runway in use, and waiting period at the 
+Holding Position, etc. 
+
+The flight is introduced into the pre-departure sequence. The Aircraft Operator / Ground 
+Handler, in coordination with the aircrew, can manage the turn-round process accordingly.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Opera-
+tions is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check should be performed at a predefined time (local parameter) to confirm TOBT 
+prior to TSAT issue and verify feasibility of the ATC Flight Plan estimates given the updated 
+TOBT. A TTOT tolerance is respected before Network Operations is informed on updated 
+TTOT. 
+
+This Milestone Process is actually constantly applicable in the CDM Platform, as soon as 
+a TOBT is available. However the confirmed TOBT prior to TSAT has special status, where 
+AO/GH check the quality of TOBT before TSAT issue. 
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM This process is triggered by   	n  a new TOBT or TTOT update. No need to confirm an 
+Operation (ACISP)      existing TOBT if it has been manually modified before.
+
+
+
+MILESTONE 10 TSAT Issued	
+
+Definition The time ATC issues the Target Start Up Approval Time
+
+Origin and priority ATC
+
+Timing The information is provided t-minutes before EOBT, where t is a parameter agreed locally
+
+Data Quality Accuracy is agreed locally.
+
+Effect The flight is stabilised into the pre-departure sequence. The Aircraft Operator/ 
+Ground Handler, in coordination with the aircrew, can manage the turn-round process 
+accordingly.
+
+Procedures First step: To inform all relevant partners of the TSAT that has been allocated to the flight. 
+The Network Operations is informed by a T-DPI-s for non regulated flights.
+
+Second step: To check whether the number of TOBT updates exceeds a tolerance defined 
+locally, after TSAT has been issued.
+
+First: The TSAT will indicate to the partners the time when the start up approval can be 
+expected. Network Operations will be informed with a T-DPI-s for non regulated flights. No 
+check is performed.
+
+Second: A check shall be performed to see the number of TOBT updates after TSAT has 
+been issued. In case the number of TOBT updates exceeds a threshold, then the TOBT 
+input should be processed according to local procedure. 
+
+This process is triggered by 
+n	 A defined time (local parameter) before TOBT
+n	 TOBT update after TSAT issue
+
+Operational Status 
+(changes to) SEQUENCED
+
+Action on CDM 
+Operation (ACISP) TTOT updated
+
+
+
+MILESTONE 11 Boarding Starts	
+
+Definition The gate is open for passengers to physically start boarding (independent of whether 
+boarding takes place via an air-bridge/pier, aircraft steps or coaching to a stand).
+
+This is not to be confused with the time passengers are pre-called to the gate via flight 
+information display systems (FIDS) or public address systems.
+
+Origin and priority Automatic from airport system or manual input by Aircraft Operator/ Ground Handler.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect When boarding commences it gives the Airport CDM Partners a good indication of 
+whether the TOBT/TSAT will be respected.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Start Boarding Time 
+(ASBT). 
+
+Second step: To check whether boarding starts in time to respect TOBT and inform the 
+AO/GH in case TOBT needs to be updated.
+
+Inform of Actual Start Boarding Time (ASBT) when it occurs. At a certain time before 
+TOBT (local variable e.g. corresponding to aircraft type) a check shall be performed to 
+check the boarding status.
+
+This process is triggered by
+n   a time variable <value> minutes before TOBT.
+
+Operational Status 
+(changes to) BOARDING
+
+Action on CDM 
+Operation (ACISP) N.A
+
+
+
+MILESTONE 12 Aircraft Ready
+
+Definition The time when all doors are closed, boarding bridge removed, push back vehicle con-
+nected, ready to taxi immediately upon reception of TWR instructions (ARDT). 
+
+Origin and priority Provided by the Aircraft Operator/ Ground Handler.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is directly available with an accuracy of +/- 1 minute.
+
+Effect ATC refines the pre-departure sequence. The pilot requests start up just before TSAT, 
+following coordination with the Ground Handler. (Dispatcher / Supervisor / Redcap).
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Ready Time (ARDT) in 
+the Airport CDM Platform and that the aircraft is ready for start up / push-back.
+
+Second step: To inform the AO/GH that TOBT has passed and the Airport CDM Platform 
+has not yet received ARDT or Ready Status (RDY).
+
+Inform of ARDT or RDY confirming that the flight follows the indicated TOBT. At TOBT 
++ tolerance the AO/GH are informed that TOBT has passed and there has not been a
+ready status message yet.
+
+This procedure is triggered by
+n  an input to the Airport CDM Platform.
+
+Operational Status 
+(changes to) READY
+
+Action on CDM N.A
+Operation (ACISP)
+
+
+
+MILESTONE 13	 Start Up Requested
+
+Definition The time that start up is requested (ASRT).
+
+Origin and priority ATC (based on pilot request).
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect ATC confirms TSAT to the pilot in order to maintain the aircraft in the pre-departure se-
+quence. Provided the aircraft was ready on time (ARDT), it is now up to ATC to assure 
+that a regulated flight can respect its CTOT.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Start up Request Time 
+(ASRT) in the Airport CDM Platform.
+
+Second step: to alert all relevant Airport CDM Partners when no start up has been re-
+quested inside the locally agreed TSAT tolerance window.
+
+Inform of ASRT when it occurs. If the start up request is not made by TSAT + tolerance, 
+the AO/GH is informed that no start up has been requested, and should update TOBT.
+
+Timestamp when the tolerance window has passed at TSAT.
+
+Operational Status 
+(changes to) N.A
+
+Action on CDM 
+Operation (ACISP) N.A
+
+
+
+MILESTONE 14 Start Up Approved	
+
+Definition ASAT - Actual start up Approval Time. 
+This is the time that an aircraft receives its start up approval.
+
+Origin and priority ATC
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect On receipt of ATC approval, the aircraft will start up, push back and start to taxi.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual start up approval Time 
+(ASAT) in the Airport CDM Platform and that the aircraft has received start up approval 
+/ push-back clearance.
+
+Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport 
+CDM Partners when no start up has been granted.
+
+Inform of ASAT when it occurs. In case the start up approval is not granted at TSAT + 
+tolerance, all relevant partners should be informed. The flight will be re-sequenced.
+
+Start up request by flight crew (voice or DCL) or a locally defined time around TSAT if 
+Milestone Process 13 is omitted.
+
+Operational Status 
+(changes to) N.A
+
+Action on CDM 
+Operation (ACISP) N.A
+
+
+
+MILESTONE 15 Off-Block
+
+Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking 
+position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).
+
+Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems 
+(e.g. A-SMGCS) or by manual input.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect TTOT updated considering the EXOT.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Off-Block Time (AOBT) 
+in the Airport CDM Platform and that the aircraft has commenced push-back / taxi from 
+parking position. 
+
+Second step: To check if TTOT changes by more than the agreed tolerance and inform 
+Network Operations.
+
+Inform of AOBT when it occurs. AOBT always triggers an A-DPI message to Network 
+Operations or in the case of remote holding at a defined time prior to TTOT. After a first 
+A-DPI is sent this check shall be performed to check TTOT updates against the TTOT
+tolerance before Network Operations is informed, with a new A-DPI, of the updated
+TTOT.
+
+This process is triggered by AOBT detection.
+
+Operational Status 
+(changes to) OFF-BLOCK
+
+Action on CDM 
+Operation (ACISP) AOBT recorded
+
+
+
+MILESTONE 16 Take Off	
+
+Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway. 
+(Equivalent to ATC ATD–Actual Time of Departure, ACARS = OFF).
+
+Origin and priority Provided by ATC system or from ACARS equipped aircraft.
+
+Timing The information is directly available as soon as possible after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect FSA and MVT messages are sent.
+
+Procedures To inform all relevant Airport CDM Partners about the actual take off.
+
+An airborne message is generated and the flight is removed from the departure sequence. 
+
+This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.
+
+Operational Status DEPARTED / TAKE OFF
+(changes to)
+
+Action on CDM ATOT recorded
+Operation (ACISP)

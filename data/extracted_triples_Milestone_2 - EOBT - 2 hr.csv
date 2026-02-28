@@ -1,0 +1,38 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Flights known in ACISP,hasStakeholder,ACISP,1,At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regulated or not.,AlignmentStatus.MATCH_LESSER
+Regulated flights receive CTOT,hasStakeholder,Network_Operations,1,All regulated flights receive a CTOT from Network Operations.,AlignmentStatus.MATCH_EXACT
+CTOT issued by Network Operations,hasStakeholder,Network_Operations,1,The CTOT is issued by the Network Operations,AlignmentStatus.MATCH_EXACT
+CTOT sent to ATS units,hasStakeholder,ATC,1,and is sent to relevant ATS units,AlignmentStatus.MATCH_EXACT
+CTOT sent to departure aerodrome,hasStakeholder,Airport,1,as well as the departure aerodrome.,AlignmentStatus.MATCH_EXACT
+ELDT updated for inbound flights,hasStakeholder,ACISP,1,"For inbound flights, ELDT is updated based on information provided by the FUM messages, taking into account the actual progress of the flight.",AlignmentStatus.MATCH_EXACT
+Check AO/GH flight estimates consistency,hasStakeholder,AO/GH,1,To check (before or after take off from outstation) whether AO/GH flight estimates are consistent with the ATC Flight Plan,AlignmentStatus.MATCH_LESSER
+Check AO/GH flight estimates consistency,hasStakeholder,ATC,1,To check (before or after take off from outstation) whether AO/GH flight estimates are consistent with the ATC Flight Plan,AlignmentStatus.MATCH_FUZZY
+Inform Network Operations about updated take off time estimate,hasStakeholder,AO/GH,1,"and to inform Network Operations about the updated take off time estimate, using a T-DPI Message.",AlignmentStatus.MATCH_FUZZY
+Inform Network Operations about updated take off time estimate,hasStakeholder,Network_Operations,1,"and to inform Network Operations about the updated take off time estimate, using a T-DPI Message.",AlignmentStatus.MATCH_FUZZY
+Inform Network Operations about updated take off time estimate,hasStakeholder,ACISP,1,using a T-DPI Message.,AlignmentStatus.MATCH_FUZZY
+Flights known in ACISP,hasNext,Regulated flights receive CTOT,1,At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regulated or not.,AlignmentStatus.MATCH_FUZZY
+Flights known in ACISP,hasNext,ELDT updated for inbound flights,1,At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regulated or not.,AlignmentStatus.MATCH_FUZZY
+Flights known in ACISP,hasNext,Check AO/GH flight estimates consistency,1,At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regulated or not.,AlignmentStatus.MATCH_FUZZY
+Regulated flights receive CTOT,hasNext,CTOT issued by Network Operations,1,All regulated flights receive a CTOT from Network Operations.,AlignmentStatus.MATCH_FUZZY
+CTOT issued by Network Operations,hasNext,CTOT sent to ATS units,1,The CTOT is issued by the Network Operations and is sent to relevant ATS units as well as the departure aerodrome.,AlignmentStatus.MATCH_FUZZY
+CTOT issued by Network Operations,hasNext,CTOT sent to departure aerodrome,1,The CTOT is issued by the Network Operations and is sent to relevant ATS units as well as the departure aerodrome.,AlignmentStatus.MATCH_FUZZY
+Check AO/GH flight estimates consistency,hasNext,Inform Network Operations about updated take off time estimate,1,"To check (before or after take off from outstation) whether AO/GH flight estimates are consistent with the ATC Flight Plan and to inform Network Operations about the updated take off time estimate, using a T-DPI Message.",AlignmentStatus.MATCH_FUZZY
+Verify feasibility of ATC Flight Plan estimated off block time,hasStakeholder,ACISP,1,This check shall be performed to verify feasibility of the ATC Flight Plan estimated off block time at EOBT-2 hrs.,AlignmentStatus.MATCH_EXACT
+Network Operations informed via first T-DPI message,hasStakeholder,Network_Operations,1,At EOBT-2 hrs Network Operations is informed through the first T-DPI message.,AlignmentStatus.MATCH_EXACT
+Network Operations informed via first T-DPI message,hasStakeholder,ACISP,1,At EOBT-2 hrs Network Operations is informed through the first T-DPI message.,AlignmentStatus.MATCH_FUZZY
+Calculate TTOT based on EIBT+MTTT+EXOT,hasStakeholder,ACISP,1,"Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT, if later than EOBT+EXOT.",AlignmentStatus.MATCH_LESSER
+Manual input of TOBT overrides EIBT+MTTT estimate,hasStakeholder,AO/GH,1,"In the case of manual input of TOBT, this estimate will override the EIBT+MTTT estimate",AlignmentStatus.MATCH_EXACT
+Manual input of TOBT overrides EIBT+MTTT estimate,hasStakeholder,ACISP,1,"In the case of manual input of TOBT, this estimate will override the EIBT+MTTT estimate",AlignmentStatus.MATCH_FUZZY
+TTOT equals TOBT+EXOT,hasStakeholder,ACISP,1,hence TTOT equals TOBT+EXOT.,AlignmentStatus.MATCH_EXACT
+Procedure triggered by time stamp at EOBT-2h,hasStakeholder,ACISP,0,"This procedure is triggered by n     a time stamp, at EOBT – 2h.",AlignmentStatus.MATCH_EXACT
+Action on CDM ETOT/TTOT/CTOT,hasStakeholder,ACISP,1,Action on CDM ETOT/TTOT/CTOT,AlignmentStatus.MATCH_EXACT
+Mark appropriate fields as REGULATED,hasStakeholder,ACISP,1,Operation (ACISP) Mark appropriate fields as REGULATED,AlignmentStatus.MATCH_EXACT
+Procedure triggered by time stamp at EOBT-2h,hasNext,Verify feasibility of ATC Flight Plan estimated off block time,1,"This procedure is triggered by n     a time stamp, at EOBT – 2h.",AlignmentStatus.MATCH_FUZZY
+Verify feasibility of ATC Flight Plan estimated off block time,hasNext,Network Operations informed via first T-DPI message,1,This check shall be performed to verify feasibility of the ATC Flight Plan estimated off block time at EOBT-2 hrs.,AlignmentStatus.MATCH_FUZZY
+Network Operations informed via first T-DPI message,hasNext,Calculate TTOT based on EIBT+MTTT+EXOT,1,At EOBT-2 hrs Network Operations is informed through the first T-DPI message.,AlignmentStatus.MATCH_FUZZY
+Calculate TTOT based on EIBT+MTTT+EXOT,hasNext,Action on CDM ETOT/TTOT/CTOT,1,"Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT, if later than EOBT+EXOT.",AlignmentStatus.MATCH_FUZZY
+Manual input of TOBT overrides EIBT+MTTT estimate,hasNext,TTOT equals TOBT+EXOT,1,"In the case of manual input of TOBT, this estimate will override the EIBT+MTTT estimate",AlignmentStatus.MATCH_FUZZY
+TTOT equals TOBT+EXOT,hasNext,Action on CDM ETOT/TTOT/CTOT,1,hence TTOT equals TOBT+EXOT.,AlignmentStatus.MATCH_FUZZY
+Action on CDM ETOT/TTOT/CTOT,hasNext,Mark appropriate fields as REGULATED,1,Action on CDM ETOT/TTOT/CTOT,AlignmentStatus.MATCH_FUZZY
+MISSING: Procedure triggered - did not state what procedure,,,-1,,
+MISSING: Action on CDM - should state as update,,,-1,,

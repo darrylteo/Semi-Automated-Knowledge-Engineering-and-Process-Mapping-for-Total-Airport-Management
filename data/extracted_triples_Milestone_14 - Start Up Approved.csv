@@ -1,0 +1,19 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Aircraft receives start up approval,hasStakeholder,ATC,1,Definition ASAT - Actual start up Approval Time. This is the time that an aircraft receives its start up approval.,AlignmentStatus.MATCH_EXACT
+ATC grants start up approval,hasStakeholder,ATC,1,Origin and priority ATC,AlignmentStatus.MATCH_EXACT
+"Aircraft starts up, pushes back, taxis",hasStakeholder,Airline,1,"Effect On receipt of ATC approval, the aircraft will start up, push back and start to taxi.",AlignmentStatus.MATCH_EXACT
+"Aircraft starts up, pushes back, taxis",hasStakeholder,AO/GH,1,"Effect On receipt of ATC approval, the aircraft will start up, push back and start to taxi.",AlignmentStatus.MATCH_FUZZY
+Inform partners of ASAT in ACISP,hasStakeholder,ACISP,1,First step: To inform all relevant Airport CDM Partners of Actual start up approval Time (ASAT) in the Airport CDM Platform and that the aircraft has received start up approval / push-back clearance.,AlignmentStatus.MATCH_EXACT
+Check ASAT vs TSAT,hasStakeholder,ACISP,1,Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport CDM Partners when no start up has been granted.,AlignmentStatus.MATCH_EXACT
+Alert partners if no start up granted,hasStakeholder,ACISP,1,Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport CDM Partners when no start up has been granted.,AlignmentStatus.MATCH_FUZZY
+Inform partners if start up not granted at TSAT + tolerance,hasStakeholder,ACISP,1,"In case the start up approval is not granted at TSAT + tolerance, all relevant partners should be informed.",AlignmentStatus.MATCH_EXACT
+Flight re-sequenced,hasStakeholder,Network_Operations,1,The flight will be re-sequenced.,AlignmentStatus.MATCH_EXACT
+ATC grants start up approval,hasNext,Aircraft receives start up approval,1,Origin and priority ATC,AlignmentStatus.MATCH_FUZZY
+Aircraft receives start up approval,hasNext,Inform partners of ASAT in ACISP,1,Definition ASAT - Actual start up Approval Time. This is the time that an aircraft receives its start up approval.,AlignmentStatus.MATCH_FUZZY
+Aircraft receives start up approval,hasNext,"Aircraft starts up, pushes back, taxis",1,Definition ASAT - Actual start up Approval Time. This is the time that an aircraft receives its start up approval.,AlignmentStatus.MATCH_FUZZY
+Inform partners of ASAT in ACISP,hasNext,Check ASAT vs TSAT,1,First step: To inform all relevant Airport CDM Partners of Actual start up approval Time (ASAT) in the Airport CDM Platform and that the aircraft has received start up approval / push-back clearance.,AlignmentStatus.MATCH_FUZZY
+Check ASAT vs TSAT,hasNext,Alert partners if no start up granted,1,Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport CDM Partners when no start up has been granted.,AlignmentStatus.MATCH_FUZZY
+Alert partners if no start up granted,hasNext,Inform partners if start up not granted at TSAT + tolerance,1,Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport CDM Partners when no start up has been granted.,AlignmentStatus.MATCH_FUZZY
+Inform partners if start up not granted at TSAT + tolerance,hasNext,Flight re-sequenced,1,"In case the start up approval is not granted at TSAT + tolerance, all relevant partners should be informed.",AlignmentStatus.MATCH_FUZZY
+Flight crew requests start up,hasStakeholder,Airline,1,Start up request by flight crew (voice or DCL),AlignmentStatus.MATCH_EXACT
+MISSING: hasNext for flight crew requests start up,,,-1,,

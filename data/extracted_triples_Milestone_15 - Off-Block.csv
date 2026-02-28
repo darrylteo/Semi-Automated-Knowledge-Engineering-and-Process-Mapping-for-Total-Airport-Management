@@ -1,0 +1,45 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Aircraft pushes back/vacates parking position,hasStakeholder,ATC,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_EXACT
+Aircraft pushes back/vacates parking position,hasStakeholder,Airport,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+ACARS OUT message sent,hasStakeholder,Airline,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by automated docking systems,hasStakeholder,Airport,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_EXACT
+AOBT information captured by ATC systems,hasStakeholder,ATC,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by manual input,hasStakeholder,AO/GH,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+TTOT updated considering EXOT,hasStakeholder,ACISP,1,Effect TTOT updated considering the EXOT.,AlignmentStatus.MATCH_EXACT
+Inform CDM Partners of AOBT in ACISP,hasStakeholder,ACISP,1,Procedures First step: To inform all relevant Airport CDM Partners of Actual Off-Block Time (AOBT) in the Airport CDM Platform and that the aircraft has commenced push-back / taxi from parking position.,AlignmentStatus.MATCH_EXACT
+Check TTOT change tolerance,hasStakeholder,ACISP,1,Second step: To check if TTOT changes by more than the agreed tolerance and inform Network Operations.,AlignmentStatus.MATCH_EXACT
+Inform Network Operations of TTOT change,hasStakeholder,ACISP,1,Second step: To check if TTOT changes by more than the agreed tolerance and inform Network Operations.,AlignmentStatus.MATCH_FUZZY
+Inform Network Operations of TTOT change,hasStakeholder,Network_Operations,1,Second step: To check if TTOT changes by more than the agreed tolerance and inform Network Operations.,AlignmentStatus.MATCH_FUZZY
+AOBT triggers A-DPI message,hasStakeholder,ACISP,1,AOBT always triggers an A-DPI message to Network Operations or in the case of remote holding at a defined time prior to TTOT.,AlignmentStatus.MATCH_EXACT
+AOBT triggers A-DPI message,hasStakeholder,Network_Operations,1,AOBT always triggers an A-DPI message to Network Operations or in the case of remote holding at a defined time prior to TTOT.,AlignmentStatus.MATCH_FUZZY
+Aircraft pushes back/vacates parking position,hasNext,TTOT updated considering EXOT,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+Aircraft pushes back/vacates parking position,hasNext,Inform CDM Partners of AOBT in ACISP,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+Aircraft pushes back/vacates parking position,hasNext,AOBT triggers A-DPI message,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+ACARS OUT message sent,hasNext,TTOT updated considering EXOT,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+ACARS OUT message sent,hasNext,Inform CDM Partners of AOBT in ACISP,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+ACARS OUT message sent,hasNext,AOBT triggers A-DPI message,1,Definition AOBT – Actual Off-Block Time. The time the aircraft pushes back/vacates the parking position (Equivalent to Airline/Handler ATD – Actual Time of Departure ACARS=OUT).,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by automated docking systems,hasNext,TTOT updated considering EXOT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by automated docking systems,hasNext,Inform CDM Partners of AOBT in ACISP,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by automated docking systems,hasNext,AOBT triggers A-DPI message,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by ATC systems,hasNext,TTOT updated considering EXOT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by ATC systems,hasNext,Inform CDM Partners of AOBT in ACISP,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by ATC systems,hasNext,AOBT triggers A-DPI message,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by manual input,hasNext,TTOT updated considering EXOT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by manual input,hasNext,Inform CDM Partners of AOBT in ACISP,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AOBT information captured by manual input,hasNext,AOBT triggers A-DPI message,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+TTOT updated considering EXOT,hasNext,Check TTOT change tolerance,1,Effect TTOT updated considering the EXOT.,AlignmentStatus.MATCH_FUZZY
+Check TTOT change tolerance,hasNext,Inform Network Operations of TTOT change,1,Second step: To check if TTOT changes by more than the agreed tolerance and inform Network Operations.,AlignmentStatus.MATCH_FUZZY
+AOBT detected,hasStakeholder,ATC,1,This process is triggered by AOBT detection.,AlignmentStatus.MATCH_FUZZY
+AOBT recorded in ACISP,hasStakeholder,ACISP,1,Action on CDM Operation (ACISP) AOBT recorded,AlignmentStatus.MATCH_FUZZY
+Operational status changes to OFF-BLOCK,hasStakeholder,ACISP,1,Operational Status (changes to) OFF-BLOCK,AlignmentStatus.MATCH_FUZZY
+First A-DPI sent,hasStakeholder,ACISP,1,After a first A-DPI is sent,AlignmentStatus.MATCH_EXACT
+Check TTOT updates against tolerance,hasStakeholder,ACISP,1,this check shall be performed to check TTOT updates against the TTOT tolerance,AlignmentStatus.MATCH_EXACT
+New A-DPI sent,hasStakeholder,ACISP,1,with a new A-DPI,AlignmentStatus.MATCH_FUZZY
+Network Operations informed of updated TTOT,hasStakeholder,Network_Operations,1,"Network Operations is informed, with a new A-DPI, of the updated TTOT.",AlignmentStatus.MATCH_EXACT
+AOBT detected,hasNext,AOBT recorded in ACISP,1,This process is triggered by AOBT detection.,AlignmentStatus.MATCH_EXACT
+AOBT recorded in ACISP,hasNext,Operational status changes to OFF-BLOCK,1,Action on CDM Operation (ACISP) AOBT recorded,AlignmentStatus.MATCH_FUZZY
+Operational status changes to OFF-BLOCK,hasNext,Check TTOT updates against tolerance,1,Operational Status (changes to) OFF-BLOCK,AlignmentStatus.MATCH_EXACT
+First A-DPI sent,hasNext,Check TTOT updates against tolerance,1,After a first A-DPI is sent,AlignmentStatus.MATCH_FUZZY
+Check TTOT updates against tolerance,hasNext,New A-DPI sent,1,this check shall be performed to check TTOT updates against the TTOT tolerance,AlignmentStatus.MATCH_FUZZY
+New A-DPI sent,hasNext,Network Operations informed of updated TTOT,1,with a new A-DPI,AlignmentStatus.MATCH_FUZZY
+MISSING: Aircraft pushes back/vacates parking position - AO/GH,,,-1,,

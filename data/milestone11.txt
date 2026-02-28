@@ -1,0 +1,35 @@
+MILESTONE 11 Boarding Starts	
+
+Definition The gate is open for passengers to physically start boarding (independent of whether 
+boarding takes place via an air-bridge/pier, aircraft steps or coaching to a stand).
+
+This is not to be confused with the time passengers are pre-called to the gate via flight 
+information display systems (FIDS) or public address systems.
+
+Origin and priority Automatic from airport system or manual input by Aircraft Operator/ Ground Handler.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect When boarding commences it gives the Airport CDM Partners a good indication of 
+whether the TOBT/TSAT will be respected.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Start Boarding Time 
+(ASBT). 
+
+Second step: To check whether boarding starts in time to respect TOBT and inform the 
+AO/GH in case TOBT needs to be updated.
+
+Inform of Actual Start Boarding Time (ASBT) when it occurs. At a certain time before 
+TOBT (local variable e.g. corresponding to aircraft type) a check shall be performed to 
+check the boarding status.
+
+This process is triggered by
+n   a time variable <value> minutes before TOBT.
+
+Operational Status 
+(changes to) BOARDING
+
+Action on CDM 
+Operation (ACISP) N.A

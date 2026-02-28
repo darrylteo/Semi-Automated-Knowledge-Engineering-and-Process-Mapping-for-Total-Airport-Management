@@ -1,0 +1,31 @@
+MILESTONE 14 Start Up Approved	
+
+Definition ASAT - Actual start up Approval Time. 
+This is the time that an aircraft receives its start up approval.
+
+Origin and priority ATC
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect On receipt of ATC approval, the aircraft will start up, push back and start to taxi.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual start up approval Time 
+(ASAT) in the Airport CDM Platform and that the aircraft has received start up approval 
+/ push-back clearance.
+
+Second step: To check if ASAT is in accordance to TSAT and to alert all relevant Airport 
+CDM Partners when no start up has been granted.
+
+Inform of ASAT when it occurs. In case the start up approval is not granted at TSAT + 
+tolerance, all relevant partners should be informed. The flight will be re-sequenced.
+
+Start up request by flight crew (voice or DCL) or a locally defined time around TSAT if 
+Milestone Process 13 is omitted.
+
+Operational Status 
+(changes to) N.A
+
+Action on CDM 
+Operation (ACISP) N.A

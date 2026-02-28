@@ -1,0 +1,34 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+AO/GH provides final TOBT t minutes before EOBT,hasStakeholder,AO/GH,1,Definition The time at which the Aircraft Operator or Ground Handler provide their most accurate TOBT taking into account the operational situation.,AlignmentStatus.MATCH_EXACT
+AO/GH provides final TOBT t minutes before EOBT,hasStakeholder,AO/GH,1,Origin and priority The Aircraft Operator / Ground Handler provides the information.,AlignmentStatus.MATCH_EXACT
+AO/GH provides final TOBT t minutes before EOBT,hasStakeholder,AO/GH,1,Timing The information is provided t minutes before EOBT (t is a parameter time agreed locally).,AlignmentStatus.MATCH_EXACT
+ATC establishes push back/pre-departure sequence,hasStakeholder,ATC,1,An accurate TOBT at [EOBT-t minutes] is a pre-requisite for ATC to establish a push back / pre-departure sequence.,AlignmentStatus.MATCH_EXACT
+AO/GH provides final TOBT t minutes before EOBT,hasNext,ATC establishes push back/pre-departure sequence,1,An accurate TOBT at [EOBT-t minutes] is a pre-requisite for ATC to establish a push back / pre-departure sequence.,AlignmentStatus.MATCH_FUZZY
+Aircraft Operator computes TOBT strategy,hasStakeholder,Airline,1,Emphasis is put on the need for the Aircraft Operator to integrate his own strategy to compute a TOBT related to the flight.,AlignmentStatus.MATCH_EXACT
+ATC system receives TOBT,hasStakeholder,ATC,1,"Following the receipt of the TOBT, the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT)",AlignmentStatus.MATCH_LESSER
+ATC system calculates EXOT,hasStakeholder,ATC,1,"the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT) based on the predicted traffic load, gate / stand location, runway in use, and waiting period at the Holding Position, etc.",AlignmentStatus.MATCH_EXACT
+ATC system provides EXOT,hasStakeholder,ATC,1,the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT),AlignmentStatus.MATCH_FUZZY
+Flight introduced into pre-departure sequence,hasStakeholder,ATC,1,The flight is introduced into the pre-departure sequence.,AlignmentStatus.MATCH_EXACT
+AO/GH manages turn-round process,hasStakeholder,AO/GH,1,"The Aircraft Operator / Ground Handler, in coordination with the aircrew, can manage the turn-round process accordingly.",AlignmentStatus.MATCH_EXACT
+Check AO/GH TOBT consistency with ATC Flight Plan,hasStakeholder,AO/GH,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_EXACT
+Network Operations informed of TTOT changes,hasStakeholder,Network_Operations,1,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_LESSER
+Perform TOBT confirmation check,hasStakeholder,AO/GH,1,This check should be performed at a predefined time (local parameter) to confirm TOBT prior to TSAT issue,AlignmentStatus.MATCH_EXACT
+Verify ATC Flight Plan feasibility,hasStakeholder,AO/GH,1,verify feasibility of the ATC Flight Plan estimates given the updated TOBT.,AlignmentStatus.MATCH_EXACT
+Respect TTOT tolerance,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_EXACT
+Aircraft Operator computes TOBT strategy,hasNext,ATC system receives TOBT,1,Emphasis is put on the need for the Aircraft Operator to integrate his own strategy to compute a TOBT related to the flight.,AlignmentStatus.MATCH_FUZZY
+ATC system receives TOBT,hasNext,ATC system calculates EXOT,1,"Following the receipt of the TOBT, the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT)",AlignmentStatus.MATCH_FUZZY
+ATC system calculates EXOT,hasNext,ATC system provides EXOT,1,"the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT) based on the predicted traffic load, gate / stand location, runway in use, and waiting period at the Holding Position, etc.",AlignmentStatus.MATCH_FUZZY
+ATC system provides EXOT,hasNext,Flight introduced into pre-departure sequence,1,the ATC system will calculate and provide the Estimated Taxi-Out Time (EXOT),AlignmentStatus.MATCH_FUZZY
+Flight introduced into pre-departure sequence,hasNext,AO/GH manages turn-round process,1,The flight is introduced into the pre-departure sequence.,AlignmentStatus.MATCH_FUZZY
+AO/GH manages turn-round process,hasNext,Check AO/GH TOBT consistency with ATC Flight Plan,1,"The Aircraft Operator / Ground Handler, in coordination with the aircrew, can manage the turn-round process accordingly.",AlignmentStatus.MATCH_FUZZY
+Check AO/GH TOBT consistency with ATC Flight Plan,hasNext,Perform TOBT confirmation check,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Perform TOBT confirmation check,hasNext,Verify ATC Flight Plan feasibility,1,This check should be performed at a predefined time (local parameter) to confirm TOBT prior to TSAT issue,AlignmentStatus.MATCH_FUZZY
+Verify ATC Flight Plan feasibility,hasNext,Respect TTOT tolerance,1,verify feasibility of the ATC Flight Plan estimates given the updated TOBT.,AlignmentStatus.MATCH_FUZZY
+Respect TTOT tolerance,hasNext,Network Operations informed of TTOT changes,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+New TOBT or TTOT update,hasStakeholder,ACISP,1,Action on CDM This process is triggered by n a new TOBT or TTOT update.,AlignmentStatus.MATCH_FUZZY
+Milestone Process activated,hasStakeholder,ACISP,1,"This Milestone Process is actually constantly applicable in the CDM Platform, as soon as a TOBT is available.",AlignmentStatus.MATCH_EXACT
+AO/GH checks TOBT quality,hasStakeholder,AO/GH,1,"However the confirmed TOBT prior to TSAT has special status, where AO/GH check the quality of TOBT before TSAT issue.",AlignmentStatus.MATCH_EXACT
+Manually modified TOBT confirmation skipped,hasStakeholder,AO/GH,1,No need to confirm an existing TOBT if it has been manually modified before.,AlignmentStatus.MATCH_FUZZY
+New TOBT or TTOT update,hasNext,Milestone Process activated,1,Action on CDM This process is triggered by n a new TOBT or TTOT update.,AlignmentStatus.MATCH_EXACT
+Milestone Process activated,hasNext,AO/GH checks TOBT quality,1,"This Milestone Process is actually constantly applicable in the CDM Platform, as soon as a TOBT is available.",AlignmentStatus.MATCH_FUZZY
+AO/GH checks TOBT quality,hasNext,Manually modified TOBT confirmation skipped,1,"However the confirmed TOBT prior to TSAT has special status, where AO/GH check the quality of TOBT before TSAT issue.",AlignmentStatus.MATCH_FUZZY

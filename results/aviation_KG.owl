@@ -1,0 +1,1766 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://myproject.org/ontology"
+         xmlns="http://myproject.org/ontology#">
+
+<owl:Ontology rdf:about="http://myproject.org/ontology"/>
+
+<owl:ObjectProperty rdf:about="#hasStakeholder">
+  <rdfs:domain rdf:resource="#Sequenced_Item"/>
+  <rdfs:range rdf:resource="#Stakeholder"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasNext">
+  <rdfs:domain rdf:resource="#Sequenced_Item"/>
+  <rdfs:range rdf:resource="#Sequenced_Item"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasSequencedItem">
+  <rdfs:domain rdf:resource="#Abstract_Procedure"/>
+  <rdfs:range rdf:resource="#Sequenced_Item"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#SourceText">
+  <rdfs:domain rdf:resource="#Sequenced_Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Abstract_Procedure">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Improvised_Procedure">
+  <rdfs:subClassOf rdf:resource="#Abstract_Procedure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Procedure">
+  <rdfs:subClassOf rdf:resource="#Abstract_Procedure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Stakeholder">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sequenced_Item">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_AO_provides_flight_data"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_ATC_units_receive_flight_plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Airport_CDM_Platform_initiated"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Allow_local_flight_processing"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Available_information_processed_by_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Check_flight_data_consistency"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Confirm_flight_to_Network_Operations"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences_messaging"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_E-DPI_message_consistency_check"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_ELDT_and_EIBT_updated_for_arrival"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_EOBT_and_ETOT_updated_for_departure"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_First_activation_of_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_distributed_by_IFPS"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_initiates_outbound_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_used_to_update_information"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_ICAO_flight_plan_submitted_to_ATC"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_New_or_late_submissions_of_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Operational_Status_changes_to_INITIATED"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_AO_provides_flight_data">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Check_flight_data_consistency"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AO/GH">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Check_flight_data_consistency">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences_messaging"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_ATC_units_receive_flight_plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Airport_CDM_Platform_initiated"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ATC">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Airport_CDM_Platform_initiated">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Available_information_processed_by_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ACISP">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Available_information_processed_by_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_used_to_update_information"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Allow_local_flight_processing">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Airport">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_used_to_update_information">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences_messaging">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Confirm_flight_to_Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Confirm_flight_to_Network_Operations">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Allow_local_flight_processing"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_E-DPI_message_consistency_check">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Operational_Status_changes_to_INITIATED"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Operational_Status_changes_to_INITIATED">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_ELDT_and_EIBT_updated_for_arrival"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_EOBT_and_ETOT_updated_for_departure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_ELDT_and_EIBT_updated_for_arrival">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_EOBT_and_ETOT_updated_for_departure">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_DPI_process_commences"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_First_activation_of_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_E-DPI_message_consistency_check"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_distributed_by_IFPS">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_ATC_units_receive_flight_plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Network_Operations">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_initiates_outbound_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Check_flight_data_consistency"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_ICAO_flight_plan_submitted_to_ATC">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_Flight_plan_distributed_by_IFPS"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Airline">
+  <rdf:type rdf:resource="#Stakeholder"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_1_-_ATC_Flight_Plan_Activated:_New_or_late_submissions_of_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_1_-_ATC_Flight_Plan_Activated:_E-DPI_message_consistency_check"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_AO/GH_manages_turn-round_based_on_TSAT"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_ATC_issues_TSAT"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Check_TOBT_update_tolerance_after_TSAT"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Check_TOBT_updates_after_TSAT_issued"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Inform_partners_of_TSAT"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Network_Operations_receives_TSAT_info"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Operational_status_changes_to_SEQUENCED"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_Process_TOBT_input_according_to_local_procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_TOBT_update_after_TSAT_issue"/>
+  <hasSequencedItem rdf:resource="#Milestone_10_-_TSAT_Issued:_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_AO/GH_manages_turn-round_based_on_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_ATC_issues_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Inform_partners_of_TSAT"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Check_TOBT_update_tolerance_after_TSAT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Inform_partners_of_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Network_Operations_receives_TSAT_info"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_AO/GH_manages_turn-round_based_on_TSAT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Check_TOBT_update_tolerance_after_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Check_TOBT_updates_after_TSAT_issued">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Process_TOBT_input_according_to_local_procedure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Process_TOBT_input_according_to_local_procedure">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Network_Operations_receives_TSAT_info">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_Operational_status_changes_to_SEQUENCED">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Operational_status_changes_to_SEQUENCED"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_10_-_TSAT_Issued:_TOBT_update_after_TSAT_issue">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_10_-_TSAT_Issued:_Check_TOBT_updates_after_TSAT_issued"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Boarding_start_automatically_recorded"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Boarding_start_manually_input"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Check_boarding_start_time_against_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Check_boarding_status"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Gate_opens_for_passenger_boarding"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_AO/GH_for_TOBT_update"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_Airport_CDM_Partners_of_ASBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_of_ASBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Operational_status_changes_to_BOARDING"/>
+  <hasSequencedItem rdf:resource="#Milestone_11_-_Boarding_Starts:_Process_triggered_by_time_variable_before_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Boarding_start_automatically_recorded">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_Airport_CDM_Partners_of_ASBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Inform_Airport_CDM_Partners_of_ASBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Check_boarding_start_time_against_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Boarding_start_manually_input">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_Airport_CDM_Partners_of_ASBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Check_boarding_start_time_against_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_AO/GH_for_TOBT_update"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Inform_AO/GH_for_TOBT_update">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Check_boarding_status">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Inform_of_ASBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Inform_of_ASBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Operational_status_changes_to_BOARDING"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Gate_opens_for_passenger_boarding">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Boarding_start_automatically_recorded"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Boarding_start_manually_input"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Operational_status_changes_to_BOARDING">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_11_-_Boarding_Starts:_Process_triggered_by_time_variable_before_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_11_-_Boarding_Starts:_Check_boarding_status"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_checks_for_missing_ARDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_TOBT_passed_without_ready_status"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_missing_ARDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_monitors_for_ready_status_by_TOBT_+_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_receives_and_updates_ARDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_AO/GH_informs_of_ARDT/RDY"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_AO/GH_provides_ARDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_ATC_refines_pre-departure_sequence"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_Aircraft_becomes_ready_ARDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_Input_to_Airport_CDM_Platform"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_Operational_Status_changes_to_READY"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_Pilot_coordinates_with_Ground_Handler"/>
+  <hasSequencedItem rdf:resource="#Milestone_12_-_Aircraft_Ready:_Pilot_requests_start_up"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ACISP_checks_for_missing_ARDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_missing_ARDT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_missing_ARDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_TOBT_passed_without_ready_status">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ACISP_monitors_for_ready_status_by_TOBT_+_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_informs_AO/GH_of_TOBT_passed_without_ready_status"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ACISP_receives_and_updates_ARDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_ATC_refines_pre-departure_sequence"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_ATC_refines_pre-departure_sequence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_Pilot_requests_start_up"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_AO/GH_informs_of_ARDT/RDY">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_Operational_Status_changes_to_READY"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_Operational_Status_changes_to_READY">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_AO/GH_provides_ARDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_receives_and_updates_ARDT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_Pilot_requests_start_up">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_Pilot_coordinates_with_Ground_Handler"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_Aircraft_becomes_ready_ARDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_AO/GH_provides_ARDT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_Input_to_Airport_CDM_Platform">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_AO/GH_informs_of_ARDT/RDY"/>
+  <hasNext rdf:resource="#Milestone_12_-_Aircraft_Ready:_ACISP_monitors_for_ready_status_by_TOBT_+_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_12_-_Aircraft_Ready:_Pilot_coordinates_with_Ground_Handler">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_AO/GH_informed_of_no_start_up_request"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_AO/GH_updates_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_ATC_assures_regulated_flight_respects_CTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_ATC_confirms_TSAT_to_pilot"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_Alert_CDM_Partners_if_no_start_up_requested_within_TSAT_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_Inform_CDM_Partners_of_ASRT_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_Start_up_requested_ASRT"/>
+  <hasSequencedItem rdf:resource="#Milestone_13_-_Start_Up_Requested:_Tolerance_window_passed_at_TSAT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_AO/GH_informed_of_no_start_up_request">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_AO/GH_updates_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_AO/GH_updates_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_ATC_assures_regulated_flight_respects_CTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_ATC_confirms_TSAT_to_pilot">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_ATC_assures_regulated_flight_respects_CTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_Alert_CDM_Partners_if_no_start_up_requested_within_TSAT_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_AO/GH_informed_of_no_start_up_request"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_Inform_CDM_Partners_of_ASRT_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_Alert_CDM_Partners_if_no_start_up_requested_within_TSAT_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_Start_up_requested_ASRT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_ATC_confirms_TSAT_to_pilot"/>
+  <hasNext rdf:resource="#Milestone_13_-_Start_Up_Requested:_Inform_CDM_Partners_of_ASRT_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_13_-_Start_Up_Requested:_Tolerance_window_passed_at_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_ATC_grants_start_up_approval"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Aircraft_receives_start_up_approval"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Aircraft_starts_up"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Alert_partners_if_no_start_up_granted"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Check_ASAT_vs_TSAT"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Flight_crew_requests_start_up"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Flight_re-sequenced"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Inform_partners_if_start_up_not_granted_at_TSAT_+_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_14_-_Start_Up_Approved:_Inform_partners_of_ASAT_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_ATC_grants_start_up_approval">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Aircraft_receives_start_up_approval"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Aircraft_receives_start_up_approval">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Inform_partners_of_ASAT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Aircraft_starts_up,_pushes_back,_taxis"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Inform_partners_of_ASAT_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Check_ASAT_vs_TSAT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Aircraft_starts_up,_pushes_back,_taxis">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Alert_partners_if_no_start_up_granted">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Inform_partners_if_start_up_not_granted_at_TSAT_+_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Inform_partners_if_start_up_not_granted_at_TSAT_+_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Flight_re-sequenced"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Check_ASAT_vs_TSAT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_14_-_Start_Up_Approved:_Alert_partners_if_no_start_up_granted"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Flight_crew_requests_start_up">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Flight_re-sequenced">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_ACARS_OUT_message_sent"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_detected"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_ATC_systems"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_automated_docking_systems"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_manual_input"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_recorded_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Aircraft_pushes_back/vacates_parking_position"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Check_TTOT_change_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Check_TTOT_updates_against_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_First_A-DPI_sent"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Inform_Network_Operations_of_TTOT_change"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Network_Operations_informed_of_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_New_A-DPI_sent"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_Operational_status_changes_to_OFF-BLOCK"/>
+  <hasSequencedItem rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_ACARS_OUT_message_sent">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Check_TTOT_change_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_detected">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_recorded_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Operational_status_changes_to_OFF-BLOCK"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_ATC_systems">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_automated_docking_systems">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_AOBT_information_captured_by_manual_input">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Operational_status_changes_to_OFF-BLOCK">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Check_TTOT_updates_against_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Aircraft_pushes_back/vacates_parking_position">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_TTOT_updated_considering_EXOT"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_CDM_Partners_of_AOBT_in_ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_AOBT_triggers_A-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Check_TTOT_change_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Inform_Network_Operations_of_TTOT_change"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Inform_Network_Operations_of_TTOT_change">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Check_TTOT_updates_against_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_New_A-DPI_sent"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_New_A-DPI_sent">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Network_Operations_informed_of_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_First_A-DPI_sent">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_15_-_Off-Block:_Check_TTOT_updates_against_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_15_-_Off-Block:_Network_Operations_informed_of_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_ACARS_status_set_to_OFF"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_ATOT_information_provided_by_ACARS"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_ATOT_information_provided_by_ATC_system"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Airborne_message_generated"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Aircraft_takes_off"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_CDM_Partners_informed_of_ATOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_FSA_and_MVT_messages_sent"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Flight_removed_from_departure_sequence"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Operational_status_updated_to_DEPARTED/TAKE_OFF"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Take_off_process_triggered_by_ACARS"/>
+  <hasSequencedItem rdf:resource="#Milestone_16_-_Take_Off:_Take_off_process_triggered_by_ATC_systems"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_ACARS_status_set_to_OFF">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_Operational_status_updated_to_DEPARTED/TAKE_OFF"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_FSA_and_MVT_messages_sent"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_CDM_Partners_informed_of_ATOT"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_Airborne_message_generated"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_Flight_removed_from_departure_sequence"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_ATOT_information_provided_by_ACARS">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_ATOT_information_provided_by_ATC_system">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Operational_status_updated_to_DEPARTED/TAKE_OFF">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_FSA_and_MVT_messages_sent">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_CDM_Partners_informed_of_ATOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Airborne_message_generated">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Flight_removed_from_departure_sequence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Aircraft_takes_off">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Take_off_process_triggered_by_ACARS">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_16_-_Take_Off:_Take_off_process_triggered_by_ATC_systems">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_16_-_Take_Off:_ATOT_recorded_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Action_on_CDM_ETOT/TTOT/CTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_issued_by_Network_Operations"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_ATS_units"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_departure_aerodrome"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Check_AO/GH_flight_estimates_consistency"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_ELDT_updated_for_inbound_flights"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Flights_known_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Inform_Network_Operations_about_updated_take_off_time_estimate"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Manual_input_of_TOBT_overrides_EIBT+MTTT_estimate"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Mark_appropriate_fields_as_REGULATED"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Network_Operations_informed_via_first_T-DPI_message"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Procedure_triggered_by_time_stamp_at_EOBT-2h"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Regulated_flights_receive_CTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_TTOT_equals_TOBT+EXOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Verify_feasibility_of_ATC_Flight_Plan_estimated_off_block_time"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Action_on_CDM_ETOT/TTOT/CTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Mark_appropriate_fields_as_REGULATED"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Mark_appropriate_fields_as_REGULATED">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_CTOT_issued_by_Network_Operations">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_ATS_units"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_departure_aerodrome"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_ATS_units">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_CTOT_sent_to_departure_aerodrome">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Action_on_CDM_ETOT/TTOT/CTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Check_AO/GH_flight_estimates_consistency">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Inform_Network_Operations_about_updated_take_off_time_estimate"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Inform_Network_Operations_about_updated_take_off_time_estimate">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_ELDT_updated_for_inbound_flights">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Flights_known_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Regulated_flights_receive_CTOT"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_ELDT_updated_for_inbound_flights"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Check_AO/GH_flight_estimates_consistency"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Regulated_flights_receive_CTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_CTOT_issued_by_Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Manual_input_of_TOBT_overrides_EIBT+MTTT_estimate">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_TTOT_equals_TOBT+EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_TTOT_equals_TOBT+EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Action_on_CDM_ETOT/TTOT/CTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Network_Operations_informed_via_first_T-DPI_message">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Procedure_triggered_by_time_stamp_at_EOBT-2h">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Verify_feasibility_of_ATC_Flight_Plan_estimated_off_block_time"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_2_-_EOBT_-_2_hr:_Verify_feasibility_of_ATC_Flight_Plan_estimated_off_block_time">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_2_-_EOBT_-_2_hr:_Network_Operations_informed_via_first_T-DPI_message"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_from_Network_Operations_FUM_long_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_via_AO/GH_long_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Adjust_TTOT_if_EOBT_is_later_than_EIBT+MTTT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Aircraft_Operator_receives_ATOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Check_consistency_of_estimated_landing_time_with_flight_plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ELDT_calculated_long_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ELDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Inform_Network_Operations_about_updated_take_off_time_estimates"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_monitors_flight_progress_short_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_receives_ATOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_sends_FUM_short_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Operational_status_changes_to_AIRBORNE"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Outstation_provides_ATOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Overrule_TTOT_estimate_with_TOBT+EXOT_if_TOBT_is_available"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Respect_TTOT_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Take_off_from_outstation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_from_Network_Operations_FUM_long_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ELDT_calculated_long_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_ELDT_calculated_long_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_via_AO/GH_long_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ELDT_calculated_long_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Adjust_TTOT_if_EOBT_is_later_than_EIBT+MTTT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Overrule_TTOT_estimate_with_TOBT+EXOT_if_TOBT_is_available"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Overrule_TTOT_estimate_with_TOBT+EXOT_if_TOBT_is_available">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ELDT,_EIBT,_TOBT,_and_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Aircraft_Operator_receives_ATOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_via_AO/GH_long_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Adjust_TTOT_if_EOBT_is_later_than_EIBT+MTTT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Check_consistency_of_estimated_landing_time_with_flight_plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Respect_TTOT_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Respect_TTOT_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Inform_Network_Operations_about_updated_take_off_time_estimates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_ELDT,_EIBT,_TOBT,_and_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Check_consistency_of_estimated_landing_time_with_flight_plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Inform_Network_Operations_about_updated_take_off_time_estimates">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_monitors_flight_progress_short_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_sends_FUM_short_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_sends_FUM_short_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_receives_ATOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_ATOT_received_from_Network_Operations_FUM_long_flight"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_monitors_flight_progress_short_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Operational_status_changes_to_AIRBORNE">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Calculate_TTOT_based_on_EIBT+MTTT+EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Outstation_provides_ATOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Network_Operations_receives_ATOT"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Aircraft_Operator_receives_ATOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_Take_off_from_outstation">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_3_-_Take_Off_from_Outstation:_Operational_status_changes_to_AIRBORNE"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_AO/GH_TOBT_consistency_check_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_AO/GH_enters_new_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Airport_CDM_Platform_calculates_new_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_EIBT_computation"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_ELDT_is_updated"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_ELDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Flight_detected_by_radar"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Information_available_from_ACC/Approach_Control"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_TTOT_changes"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_receives_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Operational_status_changes_to_FIR"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Radar_system_detects_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_TOBT_process_commenced"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_TOBT_update_for_departing_flight"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_TTOT_tolerance_checked"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Turn-round_and_passenger_decisions_made"/>
+  <hasSequencedItem rdf:resource="#Milestone_4_-_Local_Radar_Update:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_AO/GH_TOBT_consistency_check_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_TTOT_changes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_TTOT_changes">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_AO/GH_enters_new_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Airport_CDM_Platform_calculates_new_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_EIBT_computation">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Turn-round_and_passenger_decisions_made"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Turn-round_and_passenger_decisions_made">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_TOBT_update_for_departing_flight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_ELDT_is_updated">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_AO/GH_enters_new_TOBT"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Airport_CDM_Platform_calculates_new_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_ELDT,_EIBT,_TOBT_and_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Verify_ATC_Flight_Plan_feasibility">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_TTOT_tolerance_checked"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Flight_detected_by_radar">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Operational_status_changes_to_FIR"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Operational_status_changes_to_FIR">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_ELDT,_EIBT,_TOBT_and_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Information_available_from_ACC/Approach_Control">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_ELDT_is_updated"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_receives_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Network_Operations_receives_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_Radar_system_detects_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Information_available_from_ACC/Approach_Control"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_TOBT_process_commenced">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_AO/GH_TOBT_consistency_check_with_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_TOBT_update_for_departing_flight">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_TOBT_process_commenced"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_TTOT_tolerance_checked">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_4_-_Local_Radar_Update:_Network_Operations_informed_of_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_ATC_detects_flight_on_radar"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Commence_TOBT_process"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_ELDT_updated_to_determine_new_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_ELDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Flight_crosses_defined_range/position_or_level"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Flight_detected_by_radar"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Flight_enters_Final_Approach"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Flight_identified_by_SSR_code"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Initiating_ground_handling_services"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Local_parameters_defined_for_timing"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Network_Operations_informed_of_TTOT_change"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Operational_status_changes_to_FINAL"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Partners_start_moving_resources"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Positioning_parking_marshal"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_TTOT_tolerance_check_performed"/>
+  <hasSequencedItem rdf:resource="#Milestone_5_-_Final_Approach:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_ATC_detects_flight_on_radar">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Flight_identified_by_SSR_code"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Flight_identified_by_SSR_code">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Flight_crosses_defined_range/position_or_level"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Commence_TOBT_process">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_ELDT_updated_to_determine_new_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Commence_TOBT_process"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Partners_start_moving_resources"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Partners_start_moving_resources">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Positioning_parking_marshal"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Initiating_ground_handling_services"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_ELDT,_EIBT,_TOBT,_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Verify_ATC_Flight_Plan_feasibility"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_TTOT_tolerance_check_performed"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Verify_ATC_Flight_Plan_feasibility">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Network_Operations_informed_of_TTOT_change"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_TTOT_tolerance_check_performed">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Network_Operations_informed_of_TTOT_change"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Flight_crosses_defined_range/position_or_level">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_ELDT_updated_to_determine_new_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Flight_detected_by_radar">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_Operational_status_changes_to_FINAL"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_ELDT,_EIBT,_TOBT,_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Operational_status_changes_to_FINAL">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Flight_enters_Final_Approach">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_5_-_Final_Approach:_ATC_detects_flight_on_radar"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Initiating_ground_handling_services">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Local_parameters_defined_for_timing">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Network_Operations_informed_of_TTOT_change">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_Positioning_parking_marshal">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_ACARS_status_set_to_ON"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_ALDT_occurrence_triggers_updates"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_ALDT_provided_by_ACARS"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_ALDT_provided_by_ATC_system"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Actual_Landing_Time_ALDT_occurs"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Aircraft_touches_down"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_EIBT_updated_based_on_ALDT+EXIT"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_EIBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_ELDT_changes_to_ALDT"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_changes"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_update"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Operational_status_changes_to_LANDED"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_TOBT_and_TTOT_updated_by_AO/GH"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_TTOT_tolerance_check"/>
+  <hasSequencedItem rdf:resource="#Milestone_6_-_Landed:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_ACARS_status_set_to_ON">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ALDT_provided_by_ACARS"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_ALDT_provided_by_ACARS">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ALDT_occurrence_triggers_updates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_ALDT_occurrence_triggers_updates">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_TOBT_and_TTOT_updated_by_AO/GH"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_EIBT_updated_based_on_ALDT+EXIT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_TOBT_and_TTOT_updated_by_AO/GH">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_EIBT_updated_based_on_ALDT+EXIT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_ALDT_provided_by_ATC_system">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ALDT_occurrence_triggers_updates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Actual_Landing_Time_ALDT_occurs">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_Operational_status_changes_to_LANDED"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Operational_status_changes_to_LANDED">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ELDT_changes_to_ALDT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Aircraft_touches_down">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ALDT_provided_by_ATC_system"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_ALDT_provided_by_ACARS"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_changes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_changes">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_EIBT,_TOBT,_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Verify_ATC_Flight_Plan_feasibility">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_TTOT_tolerance_check"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_ELDT_changes_to_ALDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_EIBT,_TOBT,_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_update">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_TTOT_tolerance_check">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_6_-_Landed:_Network_Operations_informed_of_TTOT_update"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_ACARS_status_set_to_IN"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_AIBT_captured_via_ACARS"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_AIBT_captured_via_ATC_systems"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_AIBT_captured_via_automated_docking_systems"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_AIBT_captured_via_manual_input"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_AIBT_occurrence"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Airline/Handler_records_ATA"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Inform_Network_Operations_on_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Network_Operations_informed_of_TTOT_change"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Operational_status_IN-BLOCK"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Operational_status_changes_to_IN-BLOCK"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Respect_TTOT_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_inserted_manually_by_AO/GH"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_automatically"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_in_ACISP"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_TTOT_tolerance_check_performed"/>
+  <hasSequencedItem rdf:resource="#Milestone_7_-_In-Block:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_ACARS_status_set_to_IN">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Operational_status_changes_to_IN-BLOCK"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_automatically"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_inserted_manually_by_AO/GH"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_AIBT_captured_via_ACARS">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_AIBT_captured_via_ATC_systems">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_AIBT_captured_via_automated_docking_systems">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airport"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_AIBT_captured_via_manual_input">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_AIBT_occurrence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Operational_status_IN-BLOCK"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Operational_status_IN-BLOCK">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Airline/Handler_records_ATA">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_EIBT_changes_to_AIBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TTOT_tolerance_check_performed"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_TTOT_tolerance_check_performed">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Network_Operations_informed_of_TTOT_change"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Operational_status_changes_to_IN-BLOCK">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_automatically">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_TOBT_and_TTOT_inserted_manually_by_AO/GH">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_TOBT_and_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Inform_Network_Operations_on_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Network_Operations_informed_of_TTOT_change">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Respect_TTOT_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Inform_Network_Operations_on_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_7_-_In-Block:_Verify_ATC_Flight_Plan_feasibility">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_7_-_In-Block:_Respect_TTOT_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_ACGT_occurrence_triggers_updates"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_ACGT_occurs"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_AO/GH_provides_Ground_Handling_Started_information"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_ETTT/TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Ground_Handling_Operations_commence"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Inform_Network_Operations_on_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_informed_of_TTOT_changes"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_receives_updated_TTOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Respect_TTOT_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_TOBT_updated_by_AO/GH"/>
+  <hasSequencedItem rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Verify_feasibility_of_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_ACGT_occurrence_triggers_updates">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_TOBT_updated_by_AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_TOBT_updated_by_AO/GH">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_ACGT_occurs">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_ETTT/TOBT,_TTOT_updated_in_ACISP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_ETTT/TOBT,_TTOT_updated_in_ACISP">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Verify_feasibility_of_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_AO/GH_provides_Ground_Handling_Started_information">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_ACGT_occurrence_triggers_updates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_informed_of_TTOT_changes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_informed_of_TTOT_changes">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Verify_feasibility_of_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Respect_TTOT_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Ground_Handling_Operations_commence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_AO/GH_provides_Ground_Handling_Started_information"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Inform_Network_Operations_on_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_receives_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Network_Operations_receives_updated_TTOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_Respect_TTOT_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_8_-_Ground_Handling_Started:_Inform_Network_Operations_on_updated_TTOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT">
+  <rdf:type rdf:resource="#Procedure"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_checks_TOBT_quality"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_manages_turn-round_process"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_provides_final_TOBT_t_minutes_before_EOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_establishes_push_back/pre-departure_sequence"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_calculates_EXOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_provides_EXOT"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_receives_TOBT"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Aircraft_Operator_computes_TOBT_strategy"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Flight_introduced_into_pre-departure_sequence"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Manually_modified_TOBT_confirmation_skipped"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Milestone_Process_activated"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Network_Operations_informed_of_TTOT_changes"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_New_TOBT_or_TTOT_update"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Perform_TOBT_confirmation_check"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Respect_TTOT_tolerance"/>
+  <hasSequencedItem rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_checks_TOBT_quality">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Manually_modified_TOBT_confirmation_skipped"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Manually_modified_TOBT_confirmation_skipped">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_manages_turn-round_process">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Check_AO/GH_TOBT_consistency_with_ATC_Flight_Plan">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Perform_TOBT_confirmation_check"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_provides_final_TOBT_t_minutes_before_EOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_establishes_push_back/pre-departure_sequence"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_establishes_push_back/pre-departure_sequence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_calculates_EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_provides_EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_provides_EXOT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Flight_introduced_into_pre-departure_sequence"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Flight_introduced_into_pre-departure_sequence">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_manages_turn-round_process"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_receives_TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ATC"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_calculates_EXOT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Aircraft_Operator_computes_TOBT_strategy">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Airline"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_ATC_system_receives_TOBT"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Perform_TOBT_confirmation_check">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Verify_ATC_Flight_Plan_feasibility"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Milestone_Process_activated">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_AO/GH_checks_TOBT_quality"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Network_Operations_informed_of_TTOT_changes">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#Network_Operations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_New_TOBT_or_TTOT_update">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Milestone_Process_activated"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Verify_ATC_Flight_Plan_feasibility">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#AO/GH"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Respect_TTOT_tolerance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Respect_TTOT_tolerance">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+  <hasStakeholder rdf:resource="#ACISP"/>
+  <hasNext rdf:resource="#Milestone_9_-_Final_Confirmation_of_the_TOBT:_Network_Operations_informed_of_TTOT_changes"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_14_-_Start_Up_Approved:_Aircraft_starts_up">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_3_-_Take_Off_from_Outstation:_ELDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_4_-_Local_Radar_Update:_ELDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_5_-_Final_Approach:_ELDT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_6_-_Landed:_EIBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Milestone_8_-_Ground_Handling_Started:_ETTT/TOBT">
+  <rdf:type rdf:resource="#Sequenced_Item"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

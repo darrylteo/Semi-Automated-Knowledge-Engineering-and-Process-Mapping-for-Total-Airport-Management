@@ -1,0 +1,32 @@
+MILESTONE 6 Landed
+
+Definition ALDT – Actual Landing Time. This is the time that an aircraft touches down on a runway. 
+(Equivalent to ATC ATA – Actual Time of Arrival landing, ACARS=ON).
+
+Origin and priority Provided by ATC system or by ACARS from equipped aircraft.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of ALDT triggers an update of downstream estimates: TOBT and TTOT 
+are updated automatically or inserted manually by the Aircraft Operator / Ground Han-
+dler, calculated on the basis of the defined turn-round period for the departing flight.
+
+The EIBT can be updated according to the ALDT +EXIT.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual Landing Time: ALDT
+
+Operational Status 
+(changes to) LANDED
+
+Action on CDM ELDT changes to ALDT,
+Operation (ACISP) EIBT, TOBT and TTOT updated

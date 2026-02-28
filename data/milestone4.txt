@@ -1,0 +1,46 @@
+MILESTONE 4 Local Radar Update
+
+Definition The flight enters the FIR (Flight Information Region) or the local airspace of the destina-
+tion airport.
+
+Origin and priority This information is normally available from the Area Control Centre (ACC) or Approach Con-
+trol Unit that is associated with an airport. The radar system is able to detect a flight based 
+upon the assigned SSR code when the flight crosses a defined FIR/ATC boundary.
+
+Timing Dependent upon the position of the airport in relation to the FIR boundary.
+
+Data Quality Must be equal to the accuracy of the ATC system.
+
+Effect Update of the ELDT can trigger a new TOBT to be entered by the AO/GH, or calculated 
+automatically by the Airport CDM Platform. The accuracy of ELDT is particularly impor-
+tant at this stage since downstream decisions are taken, such as stand /gate / aircraft 
+changes, preparation of arrival sequence, preparation of ground handling operations, 
+decisions for connecting passengers.
+
+Uncertainty and ELDT non-accuracy at this stage significantly increase risks for bad and 
+last minute decisions and internal disruptions. The objective to decrease the number of 
+stand and gate changes in the last 30 minutes requires high accuracy regarding depar-
+ture and arrival times. Therefore, taking into account the taxi-in time (EXIT), any change 
+to a stand or gate is not preferred after ELDT-30’.
+
+The update of TOBT for the related departing flight takes place following this milestone. 
+Decisions such as the turn-round period, connecting passengers etc are taken and 
+need to be stable at this event. An estimated in-block time (EIBT) is computed using the 
+ELDT and the estimated taxi-in time.
+
+Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent 
+with the ATC Flight Plan. Network Operations is informed when the TTOT changes by 
+more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the up-
+dated TOBT. The TTOT tolerance is respected before Network Operations is informed 
+of updated TTOT.
+
+This process is triggered by
+n   the detection of the flight by radar in either FIR, TMA, or on Final Approach.
+
+Operational Status 
+(changes to) FIR
+
+Action on CDM 
+Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated

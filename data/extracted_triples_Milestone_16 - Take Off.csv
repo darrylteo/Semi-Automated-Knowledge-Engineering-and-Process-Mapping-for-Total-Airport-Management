@@ -1,0 +1,24 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Aircraft takes off,hasStakeholder,ATC,1,Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway.,AlignmentStatus.MATCH_FUZZY
+ACARS status set to OFF,hasStakeholder,Airline,1,"Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway. (Equivalent to ATC ATD–Actual Time of Departure, ACARS = OFF).",AlignmentStatus.MATCH_EXACT
+ATOT information provided by ATC system,hasStakeholder,ATC,1,Origin and priority Provided by ATC system or from ACARS equipped aircraft.,AlignmentStatus.MATCH_EXACT
+ATOT information provided by ACARS,hasStakeholder,Airline,1,Origin and priority Provided by ATC system or from ACARS equipped aircraft.,AlignmentStatus.MATCH_FUZZY
+FSA and MVT messages sent,hasStakeholder,ACISP,1,Effect FSA and MVT messages are sent.,AlignmentStatus.MATCH_EXACT
+CDM Partners informed of ATOT,hasStakeholder,ACISP,1,Procedures To inform all relevant Airport CDM Partners about the actual take off.,AlignmentStatus.MATCH_EXACT
+Airborne message generated,hasStakeholder,ACISP,1,An airborne message is generated and the flight is removed from the departure sequence.,AlignmentStatus.MATCH_EXACT
+Flight removed from departure sequence,hasStakeholder,ACISP,0,An airborne message is generated and the flight is removed from the departure sequence.,AlignmentStatus.MATCH_FUZZY
+Take off process triggered by ATC systems,hasStakeholder,ATC,1,"This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.",AlignmentStatus.MATCH_EXACT
+Take off process triggered by ACARS,hasStakeholder,Airline,1,"This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.",AlignmentStatus.MATCH_FUZZY
+Operational status updated to DEPARTED/TAKE OFF,hasStakeholder,ACISP,1,Operational Status DEPARTED / TAKE OFF (changes to),AlignmentStatus.MATCH_EXACT
+ATOT recorded in ACISP,hasStakeholder,ACISP,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_EXACT
+Aircraft takes off,hasNext,ATOT recorded in ACISP,1,Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway.,AlignmentStatus.MATCH_FUZZY
+ACARS status set to OFF,hasNext,ATOT recorded in ACISP,1,"Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway. (Equivalent to ATC ATD–Actual Time of Departure, ACARS = OFF).",AlignmentStatus.MATCH_FUZZY
+ATOT information provided by ATC system,hasNext,ATOT recorded in ACISP,1,Origin and priority Provided by ATC system or from ACARS equipped aircraft.,AlignmentStatus.MATCH_FUZZY
+ATOT information provided by ACARS,hasNext,ATOT recorded in ACISP,1,Origin and priority Provided by ATC system or from ACARS equipped aircraft.,AlignmentStatus.MATCH_FUZZY
+Take off process triggered by ATC systems,hasNext,ATOT recorded in ACISP,0,"This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.",AlignmentStatus.MATCH_FUZZY
+Take off process triggered by ACARS,hasNext,ATOT recorded in ACISP,1,"This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.",AlignmentStatus.MATCH_FUZZY
+ATOT recorded in ACISP,hasNext,Operational status updated to DEPARTED/TAKE OFF,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_FUZZY
+ATOT recorded in ACISP,hasNext,FSA and MVT messages sent,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_FUZZY
+ATOT recorded in ACISP,hasNext,CDM Partners informed of ATOT,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_FUZZY
+ATOT recorded in ACISP,hasNext,Airborne message generated,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_FUZZY
+ATOT recorded in ACISP,hasNext,Flight removed from departure sequence,1,Action on CDM ATOT recorded Operation (ACISP),AlignmentStatus.MATCH_FUZZY

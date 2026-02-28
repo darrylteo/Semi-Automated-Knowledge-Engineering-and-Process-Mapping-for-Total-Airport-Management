@@ -1,0 +1,42 @@
+MILESTONE 1 ATC Flight Plan Activated	
+
+Definition The ICAO flight plan is submitted to ATC. The Airport CDM Platform is initiated for this flight, 
+and all available information is processed.
+
+Origin and priority The ATC Flight Plan is submitted by the Aircraft Operator and distributed by the IFPS. All 
+involved ATC units receive the flight plan, including departure and destination aerodromes.
+
+Timing Normally this takes place 3 hours before EOBT, however it may be later. In some cases a 
+repetitive flight plan (RFPL) has been submitted, covering daily or weekly flights.
+
+Data Quality The ATC Flight Plan corresponds to the airport slot programme.
+
+Effect One aircraft turn-round normally includes an arriving and a departing flight, meaning that 
+it will have two related flight plans. For coordinated airports, the outbound flight is already 
+known. The flight plan may be used to update certain information such as type of aircraft. 
+For long distance flights, the ELDT may differ from the airport slot. For non coordinated 
+airports, the flight plan is used to initiate the outbound flight. The flight is ready not later than 
+15 minutes after the planned EOBT. The DPI process commences the correct messaging 
+with Network Operations (if implemented – see attachment 2 for details).
+
+Procedures To check consistency between ATC Flight Plan, Airport Slot and Airport flight data and 
+then confirm the flight to the Network Operations and allow further local processing of 
+the flight.
+
+This check shall be performed to verify the consistency between the ATC Flight Plan, Airport 
+Slot and Airport flight data before the first E-DPI is sent. The AO must provide correct infor-
+mation before this first E-DPI message, in order to feed Network Operations with consistent 
+SOBT, aircraft registration, and first destination data, as early in time as possible. The E-DPI 
+message should not be sent if no or inconsistent information is provided.
+
+This process is triggered by:
+n	 The first activation of the ATC Flight Plan (earliest EOBT-3 hr), or
+n	 New or late submissions of the ATC Flight Plan, after cancellation or revised EOBT
+
+Operational Status INITIATED
+(changes to)
+
+Action on CDM ELDT and EIBT updated for an arrival	
+Operation (ACISP) EOBT and ETOT updated for a departure	
+
+The DPI process commences (if implemented – see section 3.7.3 for details).

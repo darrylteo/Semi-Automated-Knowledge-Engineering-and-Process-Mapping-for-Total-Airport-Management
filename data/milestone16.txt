@@ -1,0 +1,24 @@
+MILESTONE 16 Take Off	
+
+Definition ATOT – Actual Take Off Time. This is the time that an aircraft takes off from the runway. 
+(Equivalent to ATC ATD–Actual Time of Departure, ACARS = OFF).
+
+Origin and priority Provided by ATC system or from ACARS equipped aircraft.
+
+Timing The information is directly available as soon as possible after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect FSA and MVT messages are sent.
+
+Procedures To inform all relevant Airport CDM Partners about the actual take off.
+
+An airborne message is generated and the flight is removed from the departure sequence. 
+
+This process is triggered by Tower FDPS, A-SMGCS / Radar detection or ACARS.
+
+Operational Status DEPARTED / TAKE OFF
+(changes to)
+
+Action on CDM ATOT recorded
+Operation (ACISP)

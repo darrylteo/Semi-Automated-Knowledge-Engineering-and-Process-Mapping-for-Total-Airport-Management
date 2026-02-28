@@ -1,0 +1,30 @@
+MILESTONE 13	 Start Up Requested
+
+Definition The time that start up is requested (ASRT).
+
+Origin and priority ATC (based on pilot request).
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect ATC confirms TSAT to the pilot in order to maintain the aircraft in the pre-departure se-
+quence. Provided the aircraft was ready on time (ARDT), it is now up to ATC to assure 
+that a regulated flight can respect its CTOT.
+
+Procedures First step: To inform all relevant Airport CDM Partners of Actual Start up Request Time 
+(ASRT) in the Airport CDM Platform.
+
+Second step: to alert all relevant Airport CDM Partners when no start up has been re-
+quested inside the locally agreed TSAT tolerance window.
+
+Inform of ASRT when it occurs. If the start up request is not made by TSAT + tolerance, 
+the AO/GH is informed that no start up has been requested, and should update TOBT.
+
+Timestamp when the tolerance window has passed at TSAT.
+
+Operational Status 
+(changes to) N.A
+
+Action on CDM 
+Operation (ACISP) N.A

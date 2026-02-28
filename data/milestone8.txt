@@ -1,0 +1,34 @@
+MILESTONE 8 Ground Handling Started	
+
+Definition Commence of Ground Handling Operations (ACGT).
+
+Note: this milestone is specific to flights that are the first operation of the day or that have 
+been long term parked. For flights that are on a normal turn-round ACGT is considered 
+to commence at AIBT.
+
+Origin and priority Aircraft Operator / Ground Handler will provide the information.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of ACGT triggers an update of downstream estimates:
+TOBT is updated automatically or inserted manually by the Aircraft Operator / Ground 
+Handler, calculated on the basis of the estimated turn-round period for the departing 
+flight.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual Commence of Ground Handling: ACGT 
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM 
+Operation (ACISP) ETTT/TOBT, TTOT updated

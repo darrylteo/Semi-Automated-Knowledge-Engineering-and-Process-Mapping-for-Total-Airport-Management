@@ -1,0 +1,32 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Aircraft touches down,hasStakeholder,ATC,1,Definition ALDT – Actual Landing Time. This is the time that an aircraft touches down on a runway.,AlignmentStatus.MATCH_EXACT
+ACARS status set to ON,hasStakeholder,Airline,1,"(Equivalent to ATC ATA – Actual Time of Arrival landing, ACARS=ON).",AlignmentStatus.MATCH_EXACT
+ALDT provided by ATC system,hasStakeholder,ATC,1,Origin and priority Provided by ATC system,AlignmentStatus.MATCH_EXACT
+ALDT provided by ACARS,hasStakeholder,Airline,1,Origin and priority Provided by ACARS from equipped aircraft.,AlignmentStatus.MATCH_FUZZY
+ALDT occurrence triggers updates,hasStakeholder,ACISP,1,Effect The occurrence of ALDT triggers an update of downstream estimates,AlignmentStatus.MATCH_EXACT
+TOBT and TTOT updated by AO/GH,hasStakeholder,AO/GH,1,TOBT and TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground Handler,AlignmentStatus.MATCH_LESSER
+EIBT updated based on ALDT+EXIT,hasStakeholder,ACISP,1,The EIBT can be updated according to the ALDT +EXIT.,AlignmentStatus.MATCH_EXACT
+Check AO/GH TOBT consistency with ATC Flight Plan,hasStakeholder,AO/GH,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_EXACT
+Network Operations informed of TTOT changes,hasStakeholder,Network_Operations,1,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_LESSER
+Aircraft touches down,hasNext,ALDT provided by ATC system,1,Definition ALDT – Actual Landing Time. This is the time that an aircraft touches down on a runway.,AlignmentStatus.MATCH_FUZZY
+Aircraft touches down,hasNext,ALDT provided by ACARS,1,Definition ALDT – Actual Landing Time. This is the time that an aircraft touches down on a runway.,AlignmentStatus.MATCH_FUZZY
+ACARS status set to ON,hasNext,ALDT provided by ACARS,1,"(Equivalent to ATC ATA – Actual Time of Arrival landing, ACARS=ON).",AlignmentStatus.MATCH_FUZZY
+ALDT provided by ATC system,hasNext,ALDT occurrence triggers updates,1,Origin and priority Provided by ATC system,AlignmentStatus.MATCH_FUZZY
+ALDT provided by ACARS,hasNext,ALDT occurrence triggers updates,1,Origin and priority Provided by ACARS from equipped aircraft.,AlignmentStatus.MATCH_FUZZY
+ALDT occurrence triggers updates,hasNext,TOBT and TTOT updated by AO/GH,1,Effect The occurrence of ALDT triggers an update of downstream estimates,AlignmentStatus.MATCH_FUZZY
+ALDT occurrence triggers updates,hasNext,EIBT updated based on ALDT+EXIT,1,Effect The occurrence of ALDT triggers an update of downstream estimates,AlignmentStatus.MATCH_FUZZY
+TOBT and TTOT updated by AO/GH,hasNext,Check AO/GH TOBT consistency with ATC Flight Plan,1,TOBT and TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground Handler,AlignmentStatus.MATCH_FUZZY
+Check AO/GH TOBT consistency with ATC Flight Plan,hasNext,Network Operations informed of TTOT changes,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Verify ATC Flight Plan feasibility,hasStakeholder,ATC,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_LESSER
+TTOT tolerance check,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_EXACT
+Network Operations informed of TTOT update,hasStakeholder,Network_Operations,1,Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Actual Landing Time (ALDT) occurs,hasStakeholder,ATC,1,This process is triggered by n Actual Landing Time: ALDT,AlignmentStatus.MATCH_EXACT
+Operational status changes to LANDED,hasStakeholder,ACISP,1,Operational Status (changes to) LANDED,AlignmentStatus.MATCH_EXACT
+ELDT changes to ALDT,hasStakeholder,ACISP,1,"Action on CDM ELDT changes to ALDT,",AlignmentStatus.MATCH_EXACT
+"EIBT, TOBT, TTOT updated in ACISP",hasStakeholder,ACISP,1,"Operation (ACISP) EIBT, TOBT and TTOT updated",AlignmentStatus.MATCH_EXACT
+Actual Landing Time (ALDT) occurs,hasNext,Operational status changes to LANDED,1,This process is triggered by n Actual Landing Time: ALDT,AlignmentStatus.MATCH_FUZZY
+Operational status changes to LANDED,hasNext,ELDT changes to ALDT,1,Operational Status (changes to) LANDED,AlignmentStatus.MATCH_FUZZY
+ELDT changes to ALDT,hasNext,"EIBT, TOBT, TTOT updated in ACISP",1,"Action on CDM ELDT changes to ALDT,",AlignmentStatus.MATCH_FUZZY
+"EIBT, TOBT, TTOT updated in ACISP",hasNext,Verify ATC Flight Plan feasibility,1,"Operation (ACISP) EIBT, TOBT and TTOT updated",AlignmentStatus.MATCH_FUZZY
+Verify ATC Flight Plan feasibility,hasNext,TTOT tolerance check,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+TTOT tolerance check,hasNext,Network Operations informed of TTOT update,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY

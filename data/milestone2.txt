@@ -1,0 +1,33 @@
+MILESTONE 2 EOBT - 2 hr
+
+Definition At EOBT-2 hr most flights will be known in the Airport CDM Platform including if they are regu-
+lated or not. All regulated flights receive a CTOT from Network Operations.
+
+Origin and priority The CTOT is issued by the Network Operations and is sent to relevant ATS units as well as the 
+departure aerodrome. CTOT flights usually have a priority over unregulated flights.
+
+Timing If the flight is regulated, a CTOT is issued at EOBT–2h.	
+
+Data Quality Not applicable.
+
+Effect For inbound flights, ELDT is updated based on information provided by the FUM messages, 
+taking into account the actual progress of the flight. 					
+
+Procedures To check (before or after take off from outstation) whether AO/GH flight estimates are consist-
+ent with the ATC Flight Plan and to inform Network Operations about the updated take off 
+time estimate, using a T-DPI Message.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan estimated off block 
+time at EOBT-2 hrs. At EOBT-2 hrs Network Operations is informed through the first T-DPI 
+message. Calculation basis for the TTOT shall take into account EIBT+MTTT+EXOT, if lat-
+er than EOBT+EXOT. In the case of manual input of TOBT, this estimate will override the 
+EIBT+MTTT estimate, hence TTOT equals TOBT+EXOT.
+
+This procedure is triggered by 
+n     a time stamp, at EOBT – 2h.	
+
+Operational Status N. A.	
+(changes to)
+
+Action on CDM ETOT/TTOT/CTOT	  
+Operation (ACISP) Mark appropriate fields as REGULATED

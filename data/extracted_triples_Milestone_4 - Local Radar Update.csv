@@ -1,0 +1,37 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+Radar system detects flight,hasStakeholder,ATC,1,The radar system is able to detect a flight based upon the assigned SSR code when the flight crosses a defined FIR/ATC boundary.,AlignmentStatus.MATCH_EXACT
+Information available from ACC/Approach Control,hasStakeholder,ATC,1,This information is normally available from the Area Control Centre (ACC) or Approach Control Unit that is associated with an airport.,AlignmentStatus.MATCH_FUZZY
+ELDT is updated,hasStakeholder,ACISP,1,"Effect Update of the ELDT can trigger a new TOBT to be entered by the AO/GH, or calculated automatically by the Airport CDM Platform.",AlignmentStatus.MATCH_EXACT
+AO/GH enters new TOBT,hasStakeholder,AO/GH,1,Update of the ELDT can trigger a new TOBT to be entered by the AO/GH,AlignmentStatus.MATCH_FUZZY
+Airport CDM Platform calculates new TOBT,hasStakeholder,ACISP,1,or calculated automatically by the Airport CDM Platform.,AlignmentStatus.MATCH_FUZZY
+EIBT computation,hasStakeholder,ACISP,1,An estimated in-block time (EIBT) is computed using the ELDT and the estimated taxi-in time.,AlignmentStatus.MATCH_FUZZY
+Turn-round and passenger decisions made,hasStakeholder,AO/GH,0,"Decisions such as the turn-round period, connecting passengers etc are taken and need to be stable at this event.",AlignmentStatus.MATCH_EXACT
+TOBT update for departing flight,hasStakeholder,AO/GH,1,The update of TOBT for the related departing flight takes place following this milestone.,AlignmentStatus.MATCH_LESSER
+TOBT process commenced,hasStakeholder,AO/GH,1,Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_EXACT
+AO/GH TOBT consistency check with ATC Flight Plan,hasStakeholder,AO/GH,1,Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Network Operations informed of TTOT changes,hasStakeholder,Network_Operations,1,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_EXACT
+Flight enters FIR/local airspace,hasNext,Radar system detects flight,1,Definition The flight enters the FIR (Flight Information Region) or the local airspace of the destination airport.,AlignmentStatus.MATCH_LESSER
+Radar system detects flight,hasNext,Information available from ACC/Approach Control,1,The radar system is able to detect a flight based upon the assigned SSR code when the flight crosses a defined FIR/ATC boundary.,AlignmentStatus.MATCH_FUZZY
+Information available from ACC/Approach Control,hasNext,ELDT is updated,1,This information is normally available from the Area Control Centre (ACC) or Approach Control Unit that is associated with an airport.,AlignmentStatus.MATCH_FUZZY
+ELDT is updated,hasNext,AO/GH enters new TOBT,1,"Effect Update of the ELDT can trigger a new TOBT to be entered by the AO/GH, or calculated automatically by the Airport CDM Platform.",AlignmentStatus.MATCH_FUZZY
+ELDT is updated,hasNext,Airport CDM Platform calculates new TOBT,1,"Effect Update of the ELDT can trigger a new TOBT to be entered by the AO/GH, or calculated automatically by the Airport CDM Platform.",AlignmentStatus.MATCH_FUZZY
+EIBT computation,hasNext,Turn-round and passenger decisions made,0,An estimated in-block time (EIBT) is computed using the ELDT and the estimated taxi-in time.,AlignmentStatus.MATCH_FUZZY
+Turn-round and passenger decisions made,hasNext,TOBT update for departing flight,1,"Decisions such as the turn-round period, connecting passengers etc are taken and need to be stable at this event.",AlignmentStatus.MATCH_FUZZY
+TOBT update for departing flight,hasNext,TOBT process commenced,1,The update of TOBT for the related departing flight takes place following this milestone.,AlignmentStatus.MATCH_FUZZY
+TOBT process commenced,hasNext,AO/GH TOBT consistency check with ATC Flight Plan,1,Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+AO/GH TOBT consistency check with ATC Flight Plan,hasNext,Network Operations informed of TTOT changes,1,Procedures To commence the TOBT process and check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Network Operations informed of TTOT changes,hasNext,null,0,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_FUZZY
+Flight detected by radar,hasStakeholder,ATC,1,"This process is triggered by n the detection of the flight by radar in either FIR, TMA, or on Final Approach.",AlignmentStatus.MATCH_EXACT
+Operational status changes to FIR,hasStakeholder,ACISP,1,Operational Status (changes to) FIR,AlignmentStatus.MATCH_EXACT
+"ELDT, EIBT, TOBT and TTOT updated in ACISP",hasStakeholder,ACISP,1,"Action on CDM Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated",AlignmentStatus.MATCH_EXACT
+Verify ATC Flight Plan feasibility,hasStakeholder,AO/GH,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT.,AlignmentStatus.MATCH_FUZZY
+TTOT tolerance checked,hasStakeholder,ACISP,1,The TTOT tolerance is respected before Network Operations is informed of updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Network Operations informed of updated TTOT,hasStakeholder,ACISP,1,The TTOT tolerance is respected before Network Operations is informed of updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Network Operations receives updated TTOT,hasStakeholder,Network_Operations,1,The TTOT tolerance is respected before Network Operations is informed of updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Flight detected by radar,hasNext,Operational status changes to FIR,1,"This process is triggered by n the detection of the flight by radar in either FIR, TMA, or on Final Approach.",AlignmentStatus.MATCH_FUZZY
+Operational status changes to FIR,hasNext,"ELDT, EIBT, TOBT and TTOT updated in ACISP",1,Operational Status (changes to) FIR,AlignmentStatus.MATCH_FUZZY
+"ELDT, EIBT, TOBT and TTOT updated in ACISP",hasNext,Verify ATC Flight Plan feasibility,1,"Action on CDM Operation (ACISP) ELDT, EIBT, TOBT and TTOT updated",AlignmentStatus.MATCH_FUZZY
+Verify ATC Flight Plan feasibility,hasNext,TTOT tolerance checked,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT.,AlignmentStatus.MATCH_FUZZY
+TTOT tolerance checked,hasNext,Network Operations informed of updated TTOT,1,The TTOT tolerance is respected before Network Operations is informed of updated TTOT.,AlignmentStatus.MATCH_FUZZY
+Network Operations informed of updated TTOT,hasNext,Network Operations receives updated TTOT,1,The TTOT tolerance is respected before Network Operations is informed of updated TTOT.,AlignmentStatus.MATCH_FUZZY
+MISSING: ELDT is updated hasNext Turn-round and passenger decisions made,,,-1,,

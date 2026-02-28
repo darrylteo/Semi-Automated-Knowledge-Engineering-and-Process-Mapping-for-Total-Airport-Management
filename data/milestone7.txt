@@ -1,0 +1,34 @@
+MILESTONE 7 In-Block	
+
+Definition AIBT - Actual In-Block Time. This is the time that an aircraft arrives in-blocks.
+(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)
+
+Note: ACGT is considered to commence at AIBT
+
+Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems 
+(e.g. A-SMGCS) or by manual input.
+
+Timing The information is directly available after occurrence of the milestone.
+
+Data Quality Data is available with an accuracy of +/- 1 minute.
+
+Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and 
+TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground 
+Handler, calculated on the basis of the estimated turn-round period for the departing 
+flight.
+
+Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan. Network Op-
+erations is informed when the TTOT changes by more than the agreed TTOT tolerance.
+
+This check shall be performed to verify feasibility of the ATC Flight Plan given the updat-
+ed TOBT or ATC Flight Plan. A TTOT tolerance is respected before Network Operations 
+is informed on updated TTOT.
+
+This process is triggered by 
+n   Actual In Blocks Time: AIBT
+
+Operational Status 
+(changes to) IN-BLOCK
+
+Action on CDM EIBT changes to AIBT
+Operation (ACISP) TOBT and TTOT updated

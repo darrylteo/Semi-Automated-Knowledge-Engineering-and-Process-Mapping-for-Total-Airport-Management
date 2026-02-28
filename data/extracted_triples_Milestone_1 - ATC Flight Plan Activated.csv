@@ -1,0 +1,39 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+ICAO flight plan submitted to ATC,hasStakeholder,Airline,1,The ICAO flight plan is submitted to ATC.,AlignmentStatus.MATCH_EXACT
+ICAO flight plan submitted to ATC,hasStakeholder,ATC,1,The ICAO flight plan is submitted to ATC.,AlignmentStatus.MATCH_LESSER
+Flight plan distributed by IFPS,hasStakeholder,Network_Operations,1,The ATC Flight Plan is submitted by the Aircraft Operator and distributed by the IFPS.,AlignmentStatus.MATCH_EXACT
+ATC units receive flight plan,hasStakeholder,ATC,1,"All involved ATC units receive the flight plan, including departure and destination aerodromes.",AlignmentStatus.MATCH_EXACT
+Airport CDM Platform initiated,hasStakeholder,ACISP,1,The Airport CDM Platform is initiated for this flight,AlignmentStatus.MATCH_LESSER
+Available information processed by ACISP,hasStakeholder,ACISP,1,and all available information is processed.,AlignmentStatus.MATCH_FUZZY
+Flight plan used to update information,hasStakeholder,ACISP,1,The flight plan may be used to update certain information such as type of aircraft.,AlignmentStatus.MATCH_EXACT
+ICAO flight plan submitted to ATC,hasNext,Flight plan distributed by IFPS,1,The ICAO flight plan is submitted to ATC.,AlignmentStatus.MATCH_FUZZY
+Flight plan distributed by IFPS,hasNext,ATC units receive flight plan,1,The ATC Flight Plan is submitted by the Aircraft Operator and distributed by the IFPS.,AlignmentStatus.MATCH_FUZZY
+ATC units receive flight plan,hasNext,Airport CDM Platform initiated,1,"All involved ATC units receive the flight plan, including departure and destination aerodromes.",AlignmentStatus.MATCH_FUZZY
+Airport CDM Platform initiated,hasNext,Available information processed by ACISP,1,The Airport CDM Platform is initiated for this flight,AlignmentStatus.MATCH_FUZZY
+Available information processed by ACISP,hasNext,Flight plan used to update information,1,and all available information is processed.,AlignmentStatus.MATCH_FUZZY
+Flight plan initiates outbound flight,hasStakeholder,Airport,1,"For non coordinated airports, the flight plan is used to initiate the outbound flight.",AlignmentStatus.MATCH_EXACT
+DPI process commences messaging,hasStakeholder,ACISP,1,The DPI process commences the correct messaging with Network Operations (if implemented – see attachment 2 for details).,AlignmentStatus.MATCH_EXACT
+Check flight data consistency,hasStakeholder,Airport,1,"Procedures To check consistency between ATC Flight Plan, Airport Slot and Airport flight data",AlignmentStatus.MATCH_FUZZY
+Confirm flight to Network Operations,hasStakeholder,Airport,1,then confirm the flight to the Network Operations,AlignmentStatus.MATCH_FUZZY
+Allow local flight processing,hasStakeholder,Airport,1,and allow further local processing of the flight.,AlignmentStatus.MATCH_FUZZY
+AO provides flight data,hasStakeholder,AO/GH,1,"The AO must provide correct information before this first E-DPI message, in order to feed Network Operations with consistent SOBT, aircraft registration, and first destination data, as early in time as possible.",AlignmentStatus.MATCH_FUZZY
+AO provides flight data,hasNext,Check flight data consistency,1,"The AO must provide correct information before this first E-DPI message, in order to feed Network Operations with consistent SOBT, aircraft registration, and first destination data, as early in time as possible.",AlignmentStatus.MATCH_FUZZY
+Flight plan initiates outbound flight,hasNext,Check flight data consistency,1,"For non coordinated airports, the flight plan is used to initiate the outbound flight.",AlignmentStatus.MATCH_FUZZY
+Check flight data consistency,hasNext,DPI process commences messaging,1,"This check shall be performed to verify the consistency between the ATC Flight Plan, Airport Slot and Airport flight data before the first E-DPI is sent.",AlignmentStatus.MATCH_FUZZY
+DPI process commences messaging,hasNext,Confirm flight to Network Operations,1,The DPI process commences the correct messaging with Network Operations (if implemented – see attachment 2 for details).,AlignmentStatus.MATCH_FUZZY
+Confirm flight to Network Operations,hasNext,Allow local flight processing,1,"Procedures To check consistency between ATC Flight Plan, Airport Slot and Airport flight data and then confirm the flight to the Network Operations and allow further local processing of the flight.",AlignmentStatus.MATCH_EXACT
+E-DPI message consistency check,hasStakeholder,ACISP,1,The E-DPI message should not be sent if no or inconsistent information is provided.,AlignmentStatus.MATCH_EXACT
+First activation of ATC Flight Plan,hasStakeholder,ATC,1,The first activation of the ATC Flight Plan (earliest EOBT-3 hr),AlignmentStatus.MATCH_FUZZY
+New or late submissions of ATC Flight Plan,hasStakeholder,ATC,1,"New or late submissions of the ATC Flight Plan, after cancellation or revised EOBT",AlignmentStatus.MATCH_FUZZY
+Operational Status changes to INITIATED,hasStakeholder,ACISP,1,Operational Status INITIATED (changes to),AlignmentStatus.MATCH_FUZZY
+ELDT and EIBT updated for arrival,hasStakeholder,ACISP,1,Action on CDM ELDT and EIBT updated for an arrival,AlignmentStatus.MATCH_FUZZY
+EOBT and ETOT updated for departure,hasStakeholder,ACISP,1,Operation (ACISP) EOBT and ETOT updated for a departure,AlignmentStatus.MATCH_FUZZY
+DPI process commences,hasStakeholder,ACISP,1,The DPI process commences (if implemented – see section 3.7.3 for details).,AlignmentStatus.MATCH_FUZZY
+First activation of ATC Flight Plan,hasNext,E-DPI message consistency check,1,This process is triggered by: n The first activation of the ATC Flight Plan (earliest EOBT-3 hr),AlignmentStatus.MATCH_EXACT
+New or late submissions of ATC Flight Plan,hasNext,E-DPI message consistency check,1,"This process is triggered by: n New or late submissions of the ATC Flight Plan, after cancellation or revised EOBT",AlignmentStatus.MATCH_FUZZY
+E-DPI message consistency check,hasNext,Operational Status changes to INITIATED,1,The E-DPI message should not be sent if no or inconsistent information is provided.,AlignmentStatus.MATCH_FUZZY
+Operational Status changes to INITIATED,hasNext,ELDT and EIBT updated for arrival,1,Operational Status INITIATED (changes to),AlignmentStatus.MATCH_EXACT
+Operational Status changes to INITIATED,hasNext,EOBT and ETOT updated for departure,1,Operational Status INITIATED (changes to),AlignmentStatus.MATCH_FUZZY
+ELDT and EIBT updated for arrival,hasNext,DPI process commences,1,Action on CDM ELDT and EIBT updated for an arrival,AlignmentStatus.MATCH_EXACT
+EOBT and ETOT updated for departure,hasNext,DPI process commences,1,Operation (ACISP) EOBT and ETOT updated for a departure,AlignmentStatus.MATCH_EXACT
+MISSING: ATC Flight Plan is submitted by the Aircraft Operator,,,-1,,

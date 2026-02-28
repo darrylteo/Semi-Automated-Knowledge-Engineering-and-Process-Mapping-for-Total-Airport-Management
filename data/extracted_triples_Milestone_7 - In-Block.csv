@@ -1,0 +1,42 @@
+Subject,Predicate,Object,Good,Source Text,Alignment
+AIBT captured via ACARS,hasStakeholder,Airline,1,Definition AIBT - Actual In-Block Time. This is the time that an aircraft arrives in-blocks.,AlignmentStatus.MATCH_EXACT
+AIBT captured via automated docking systems,hasStakeholder,Airport,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_EXACT
+AIBT captured via ATC systems,hasStakeholder,ATC,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AIBT captured via manual input,hasStakeholder,AO/GH,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+Airline/Handler records ATA,hasStakeholder,AO/GH,1,"(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)",AlignmentStatus.MATCH_FUZZY
+ACARS status set to IN,hasStakeholder,Airline,1,"(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)",AlignmentStatus.MATCH_FUZZY
+EIBT changes to AIBT,hasStakeholder,ACISP,1,Action on CDM EIBT changes to AIBT,
+Operational status changes to IN-BLOCK,hasStakeholder,ACISP,1,Operational Status (changes to) IN-BLOCK,
+TOBT and TTOT updated automatically,hasStakeholder,ACISP,1,Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and TTOT are updated automatically,AlignmentStatus.MATCH_FUZZY
+TOBT and TTOT inserted manually by AO/GH,hasStakeholder,AO/GH,1,Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground Handler,AlignmentStatus.MATCH_EXACT
+TOBT and TTOT updated in ACISP,hasStakeholder,ACISP,1,Operation (ACISP) TOBT and TTOT updated,AlignmentStatus.MATCH_FUZZY
+Check AO/GH TOBT consistency with ATC Flight Plan,hasStakeholder,AO/GH,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_EXACT
+TTOT tolerance check performed,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,
+Network Operations informed of TTOT change,hasStakeholder,Network_Operations,1,Network Operations is informed when the TTOT changes by more than the agreed TTOT tolerance.,AlignmentStatus.MATCH_FUZZY
+AIBT captured via ACARS,hasNext,EIBT changes to AIBT,1,Definition AIBT - Actual In-Block Time. This is the time that an aircraft arrives in-blocks.,AlignmentStatus.MATCH_FUZZY
+AIBT captured via automated docking systems,hasNext,EIBT changes to AIBT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AIBT captured via ATC systems,hasNext,EIBT changes to AIBT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+AIBT captured via manual input,hasNext,EIBT changes to AIBT,1,Origin and priority ACARS equipped aircraft or automated docking systems or ATC systems (e.g. A-SMGCS) or by manual input.,AlignmentStatus.MATCH_FUZZY
+Airline/Handler records ATA,hasNext,EIBT changes to AIBT,1,"(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)",AlignmentStatus.MATCH_FUZZY
+ACARS status set to IN,hasNext,EIBT changes to AIBT,1,"(Equivalent to Airline/Handler ATA – Actual Time of Arrival, ACARS = IN)",AlignmentStatus.MATCH_FUZZY
+EIBT changes to AIBT,hasNext,Operational status changes to IN-BLOCK,1,Action on CDM EIBT changes to AIBT,
+EIBT changes to AIBT,hasNext,TOBT and TTOT updated automatically,1,Action on CDM EIBT changes to AIBT,
+EIBT changes to AIBT,hasNext,TOBT and TTOT inserted manually by AO/GH,1,Action on CDM EIBT changes to AIBT,
+TOBT and TTOT updated automatically,hasNext,TOBT and TTOT updated in ACISP,1,Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and TTOT are updated automatically,AlignmentStatus.MATCH_FUZZY
+TOBT and TTOT inserted manually by AO/GH,hasNext,TOBT and TTOT updated in ACISP,1,Effect The occurrence of AIBT should trigger an update of downstream estimates: TOBT and TTOT are updated automatically or inserted manually by the Aircraft Operator / Ground Handler,AlignmentStatus.MATCH_FUZZY
+TOBT and TTOT updated in ACISP,hasNext,Check AO/GH TOBT consistency with ATC Flight Plan,1,Operation (ACISP) TOBT and TTOT updated,AlignmentStatus.MATCH_FUZZY
+Check AO/GH TOBT consistency with ATC Flight Plan,hasNext,TTOT tolerance check performed,1,Procedures To check whether the AO/GH TOBT is consistent with the ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+TTOT tolerance check performed,hasNext,Network Operations informed of TTOT change,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,
+Verify ATC Flight Plan feasibility,hasStakeholder,ACISP,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_LESSER
+Respect TTOT tolerance,hasStakeholder,ACISP,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_EXACT
+Inform Network Operations on updated TTOT,hasStakeholder,ACISP,1,Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
+AIBT occurrence,hasStakeholder,ACISP,1,This process is triggered by n Actual In Blocks Time: AIBT,AlignmentStatus.MATCH_EXACT
+Operational status IN-BLOCK,hasStakeholder,ACISP,1,Operational Status (changes to) IN-BLOCK,AlignmentStatus.MATCH_EXACT
+EIBT changes to AIBT,hasStakeholder,ACISP,1,Action on CDM EIBT changes to AIBT,AlignmentStatus.MATCH_EXACT
+TOBT and TTOT updated in ACISP,hasStakeholder,ACISP,1,Operation (ACISP) TOBT and TTOT updated,AlignmentStatus.MATCH_EXACT
+AIBT occurrence,hasNext,Operational status IN-BLOCK,1,This process is triggered by n Actual In Blocks Time: AIBT,AlignmentStatus.MATCH_FUZZY
+AIBT occurrence,hasNext,EIBT changes to AIBT,1,This process is triggered by n Actual In Blocks Time: AIBT,AlignmentStatus.MATCH_FUZZY
+EIBT changes to AIBT,hasNext,TOBT and TTOT updated in ACISP,1,Action on CDM EIBT changes to AIBT,AlignmentStatus.MATCH_FUZZY
+TOBT and TTOT updated in ACISP,hasNext,Verify ATC Flight Plan feasibility,1,Operation (ACISP) TOBT and TTOT updated,AlignmentStatus.MATCH_FUZZY
+Verify ATC Flight Plan feasibility,hasNext,Respect TTOT tolerance,1,This check shall be performed to verify feasibility of the ATC Flight Plan given the updated TOBT or ATC Flight Plan.,AlignmentStatus.MATCH_FUZZY
+Respect TTOT tolerance,hasNext,Inform Network Operations on updated TTOT,1,A TTOT tolerance is respected before Network Operations is informed on updated TTOT.,AlignmentStatus.MATCH_FUZZY
