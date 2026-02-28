@@ -4,7 +4,7 @@ This repository contains the code and datasets for the paper: **"Semi-Automated 
 
 The project focuses on extracting structured knowledge from the **Eurocontrol A-CDM** implementation manual to build a representative Knowledge Graph for airport operations, and evaluating the results for short-context and long-context information retrieval.
 
-[Full code will be made available upon paper submission acknowledgement]
+[Full code will be made available upon paper submission]
 
 ---
 
@@ -15,6 +15,7 @@ Contains the source documentation and text conversions used for extraction.
 * `milestones.pdf`: The original source document (Eurocontrol A-CDM manual).
 * `milestones.txt`: The full source document converted from PDF to text.
 * `milestone{i}.txt`: Segmented text files used for modular processing.
+* `extracted_triples_{i}.csv`: Results of the extracted knowledge triples via knowledge-graph structured prompts on LangExtract. 
 > *Note: Text conversion was performed using a free online .pdf to .txt processor (https://tools.pdf24.org/en/pdf-to-txt).*
 
 ### `./results/`
