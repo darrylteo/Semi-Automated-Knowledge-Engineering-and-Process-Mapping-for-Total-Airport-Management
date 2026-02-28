@@ -22,11 +22,13 @@ Contains the source documentation and text conversions used for extraction.
 Contains the output of the extraction process.
 * `aviation_KG.owl`: The constructed KG. Best viewed and edited using [Protégé](https://protege.stanford.edu/).
 * `airport_swimlanes.drawio`: The swimlane diagrams derived from the KG. Best viewed via [draw.io](https://app.diagrams.net/).
-* 
+ 
 ### `./src/`
 * `get_triples_lang.py` The main extraction engine that implements KG guided prompts extraction to ensure structural determinism and symbolic fusion. Page-level implementation is provided. Requires an LLM API key to run code.
 * `triples_to_KG_and_swimlanes.py`: Python script to deterministically formalize knowledge triples into a knowlegde graph (.owl format) and generate swimlane diagrams (.drawio format).
 * `utils/`: Helper functions.
+
+`requirements.txt`: Contains a minimal installation list of required libraries.
 
 ---
 ## Citation
